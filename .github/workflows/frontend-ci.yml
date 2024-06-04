@@ -1,0 +1,33 @@
+name: Frontend CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Environment
+        run: |
+          echo "Aguardando equipe selecionar suas tecnologias antes de aplicar testes mais especificos."
+
+      - name: Install dependencies
+        run: |
+          echo "Aguardando equipe selecionar suas tecnologias antes de aplicar testes mais especificos."
+
+      - name: Run lint
+        run: |
+          echo "Executar lint no Frontend"
+
+      - name: Run tests
+        run: |
+          echo "Aguardando equipe selecionar suas tecnologias antes de aplicar testes mais especificos."
