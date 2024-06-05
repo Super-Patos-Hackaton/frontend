@@ -9,9 +9,18 @@ on:
       - main
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run lint
+        run: |
+          echo "Executar lint no Frontend"
+
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -24,9 +33,11 @@ jobs:
         run: |
           echo "Aguardando equipe selecionar suas tecnologias antes de aplicar testes mais especificos."
 
-      - name: Run lint
-        run: |
-          echo "Executar lint no Frontend"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Run tests
         run: |
