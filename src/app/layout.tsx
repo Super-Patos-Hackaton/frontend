@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter"
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Desafio do Pato",
@@ -20,10 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={cn(
-        "min-h-screen bg-background font-inter antialiased",
-        inter.variable
-      )}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
