@@ -1,22 +1,25 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from "next"
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css"
+import { cn } from "@/lib/utils"
+import { fontMono, fontSans } from "@/styles/fonts"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Desafio do Pato",
-  description: "Plataforma de gestão de desafios",
-};
+  description: "Plataforma de gestão de desafios"
+}
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <body className={cn(fontSans, fontMono)}>{children}</body>
+      </ThemeProvider>
     </html>
-  );
+  )
 }
