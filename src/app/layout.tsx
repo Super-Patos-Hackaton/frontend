@@ -17,9 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <body className={cn(fontSans, fontMono)}>{children}</body>
-      </ThemeProvider>
+      <body className={cn(fontSans, fontMono)}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
