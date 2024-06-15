@@ -25,14 +25,13 @@
   </ol>
 </details>
 
-## Sobre o projeto
+## 💭 Sobre o projeto
 Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplificar o processo de nivelamento contínuo dos integrantes da Bichinhos da TI, oferecendo uma interface para criar, gerenciar e participar de desafios técnicos.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
-
-### Feito com
+### 🖥️ Feito com
 
 * [![Next][Next.js]][Next-url]
 * [![TypeScript][Typescript]][Typescript-url]
@@ -45,10 +44,7 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
 
 
 <!-- GETTING STARTED -->
-## Como rodar o projeto
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+## 🔥 Como rodar o projeto
 
 ### Pré-requisitos
 
@@ -67,9 +63,36 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    pnpm install
    ```
+3. Inicie o ambiente de desenvolvimento
+  ```sh
+  npm run dev
+  ```
+
+### Componentes shadcn/ui
+
+* Para adicionar um novo componente:
+```sh
+npm run ui:add <componente>
+```
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
+## 💡 Guia de Contribuição
+
+Obrigado por considerar contribuir para este projeto! Siga as diretrizes abaixo para garantir um processo de contribuição suave.
+
+### Processo de Pull Request
+1. Fork o repositório.
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
+3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
+4. Push para a branch (`git push origin feature/nova-feature`).
+5. Abra um Pull Request.
+
+### Padrões de Código
+- Siga as convenções de estilo de código do projeto.
+- Certifique-se de que todos os testes passem antes de abrir um PR.
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [Typescript]: https://img.shields.io/badge/typescript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white
