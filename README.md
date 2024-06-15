@@ -93,7 +93,6 @@ Obrigado por considerar contribuir para este projeto! Siga as diretrizes abaixo 
 - Certifique-se de que todos os testes passem antes de abrir um PR.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [Typescript]: https://img.shields.io/badge/typescript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white
