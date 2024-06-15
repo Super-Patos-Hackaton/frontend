@@ -10,18 +10,26 @@
   <summary>Sumário</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o projeto</a>
+      <a href="#-sobre-o-projeto">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Feito com</a></li>
+        <li><a href="#feito-com">Feito com</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Como rodar o projeto</a>
+      <a href="#-como-rodar-o-projeto">Como rodar o projeto</a>
       <ul>
-        <li><a href="#prerequisites">Pré-requisitos</a></li>
-        <li><a href="#installation">Instalação</a></li>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
+        <li><a href="#componentes-shadcnui">Componentes shadcn/ui</a></li>
+      </ul>
+      <li>
+      <a href="#-guia-de-contribuição">Guia de Contribuição</a>
+      <ul>
+        <li><a href="#processo-de-pull-request">Processo de Pull Request</a></li>
+        <li><a href="#padrões-de-código">Padrões de Código</a></li>
       </ul>
     </li>
+    
   </ol>
 </details>
 
@@ -64,16 +72,16 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
    pnpm install
    ```
 3. Inicie o ambiente de desenvolvimento
-  ```sh
-  npm run dev
-  ```
+   ```sh
+   npm run dev
+   ```
 
 ### Componentes shadcn/ui
 
 * Para adicionar um novo componente:
-```sh
-npm run ui:add <componente>
-```
+  ```sh
+  npm run ui:add <componente>
+  ```
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
@@ -93,6 +101,7 @@ Obrigado por considerar contribuir para este projeto! Siga as diretrizes abaixo 
 - Certifique-se de que todos os testes passem antes de abrir um PR.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [Typescript]: https://img.shields.io/badge/typescript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white
