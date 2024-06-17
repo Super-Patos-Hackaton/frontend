@@ -1,0 +1,9 @@
+.prettierignore
+.gitignore
+.github
+.next
+.node_modules
+pnpm-lock.yaml
+.editorconfig
+.eslintignore
+.prettierrc.json

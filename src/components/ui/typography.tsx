@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils"
 import { ReactNode } from "react"
 
@@ -10,70 +11,70 @@ const H1 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h1
       className={cn(
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+        'scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl',
         className
       )}
     >
       {children}
     </h1>
-  )
-}
+  );
+};
 
 const H2 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h2
       className={cn(
-        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        'scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0',
         className
       )}
     >
       {children}
     </h2>
-  )
-}
+  );
+};
 
 const H3 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h3
       className={cn(
-        "scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0",
+        'scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0',
         className
       )}
     >
       {children}
     </h3>
-  )
-}
+  );
+};
 
 const P = ({ children, className }: TypographyProps<HTMLParagraphElement>) => {
   return (
     <p
       className={cn(
-        "scroll-m-20 border-b pb-2 text-base font-normal tracking-tight first:mt-0",
+        'scroll-m-20 border-b pb-2 text-base font-normal tracking-tight first:mt-0',
         className
       )}
     >
       {children}
     </p>
-  )
-}
+  );
+};
 
 const Lead = ({
   children,
-  className
+  className,
 }: TypographyProps<HTMLParagraphElement>) => {
   return (
-    <p className={cn("text-xl text-muted-foreground", className)}>{children}</p>
-  )
-}
+    <p className={cn('text-xl text-muted-foreground', className)}>{children}</p>
+  );
+};
 
 const Muted = ({
   children,
-  className
+  className,
 }: TypographyProps<HTMLParagraphElement>) => {
   return (
-    <p className={cn("text-sm text-muted-foreground", className)}>{children}</p>
-  )
-}
+    <p className={cn('text-sm text-muted-foreground', className)}>{children}</p>
+  );
+};
 
-export const Typography = { H1, H2, H3, P, Lead, Muted }
+export const Typography = { H1, H2, H3, P, Lead, Muted };
