@@ -20,14 +20,23 @@
       <ul>
         <li><a href="#pré-requisitos">Pré-requisitos</a></li>
         <li><a href="#instalação">Instalação</a></li>
-        <li><a href="#componentes-shadcnui">Componentes shadcn/ui</a></li>
       </ul>
       <li>
-      <a href="#-guia-de-contribuição">Guia de Contribuição</a>
-      <ul>
-        <li><a href="#processo-de-pull-request">Processo de Pull Request</a></li>
-        <li><a href="#padrões-de-código">Padrões de Código</a></li>
-      </ul>
+        <a href="#-recursos-do-projeto">Recursos do Projeto</a>
+        <ul>
+          <li><a href="#componentes-shadcnui">Componentes shadcn/ui</a></li>
+          <li>
+            <a href="#tipografia">Tipografia</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#-guia-de-contribuição">Guia de Contribuição</a>
+        <ul>
+          <li><a href="#processo-de-pull-request">Processo de Pull Request</a></li>
+          <li><a href="#padrões-de-código">Padrões de Código</a></li>
+        </ul>
+      </li>
     </li>
     
   </ol>
@@ -76,7 +85,7 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
    npm run dev
    ```
 
-## Como usar
+## 🎒 Recursos do Projeto
 
 ### Componentes shadcn/ui
 
@@ -93,21 +102,35 @@ As Headings H1, H2 e H3 estarão presentes no projeto. Destas, é importante res
 
 Foram configuradas também as tags p, lead e muted para usos textuais diversos.
 
-Para utilização dos componentes com tipografias configuradas, utilizaremos a seguinte padronização:
-
-* Importação do componente:
+#### 1. Importação do componente:
 ```js
 import { Typography } from "@/components/ui/typography"
 ```
-* Utilização das tags dentro do tsx:
-1. H1, H2, H3, p, lead e muted
+#### 2. Utilização das tags dentro do tsx:
+
+<strong>Tag h1</strong>
 ```js
-<Typography.H1>Título 01</Typography.H1>
-<Typography.H2>Título 02</Typography.H2>
-<Typography.H3>Título 03</Typography.H3>
-<Typography.P>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography.P>
-<Typography.Lead>Vivamus dignissim accumsan velit, vitae facilisis dui accumsan ac.</Typography.Lead>
-<Typography.Muted>Cras maximus placerat velit eget posuere. Vestibulum scelerisque</Typography.Muted>
+<Typography.H1>Título h1.</Typography.H1>
+```
+<strong>Tag h2</strong>
+```js
+<Typography.H2>Título h2.</Typography.H2>
+```
+<strong>Tag h3</strong>
+```js
+<Typography.H3>Título h3.</Typography.H3>
+```
+<strong>Tag p padrão</strong>
+```js
+<Typography.P>Parágrafo padrão.</Typography.P>
+```
+<strong>Tag p com classe lead</strong>
+```js
+<Typography.Lead>Parágrafo de destaque.</Typography.Lead>
+```
+<strong>Tag p com classe muted</strong>
+```js
+<Typography.Muted>Parágrafo que precisa ter destaque inferior a todos os outros.</Typography.Muted>
 ```
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
