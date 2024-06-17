@@ -47,7 +47,6 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-
 ### 🖥️ Feito com
 
 * [![Next][Next.js]][Next-url]
@@ -57,8 +56,6 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
 
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## 🔥 Como rodar o projeto
@@ -103,6 +100,7 @@ As Headings H1, H2 e H3 estarão presentes no projeto. Destas, é importante res
 Foram configuradas também as tags p, lead e muted para usos textuais diversos.
 
 <details>
+
 #### 1. Importação do componente:
 ```js
 import { Typography } from "@/components/ui/typography"
