@@ -1,11 +1,20 @@
 {
-	"extends": ["next", "prettier", "plugin:prettier/recommended"],
-	"plugins": ["prettier"],
-	"rules": {
-		"no-console": "error",
-		"no-alert": "error",
-		"no-unused-vars": "error",
-		"semi": "warn",
-		"prettier/prettier": "error"
-	}
+  "extends": [
+    "next",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier", "@typescript-eslint"],
+  "rules": {
+    "no-console": "error",
+    "no-alert": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "off",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
+    "semi": "warn",
+    "prettier/prettier": "error"
+  }
 }
