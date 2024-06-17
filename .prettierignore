@@ -1,0 +1,6 @@
+.prettierignore
+.gitignore
+.github
+.next
+.node_modules
+pnpm-lock.yaml
