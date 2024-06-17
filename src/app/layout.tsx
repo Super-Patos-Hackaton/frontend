@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import "./globals.css"
+import "@/styles/globals.css"
 import { cn } from "@/lib/utils"
 import { fontMono, fontSans } from "@/styles/fonts"
 import { ThemeProvider } from "@/components/theme-provider"
