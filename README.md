@@ -88,6 +88,34 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
+## Lint e formatação do Código
+
+Nesse projeto, serão utilizadas as seguintes ferramentas para linting e formatação:
+
+- 🚦 [ESLint](https://eslint.org/) - Ferramenta para analisar o código estaticamente e encontrar e corrigir problemas comuns.
+- 💄 [Prettier](https://prettier.io/) - Um formatador de código que ajuda a manter o código consistente e fácil de ler.
+- 🐶 [Husky](https://typicode.github.io/husky/#/) - Uma ferramenta para adicionar facilmente hooks do Git ao seu projeto.
+- 🔍 [commitlint](https://commitlint.js.org/) - Uma ferramenta para impor um estilo e formatação consistentes nas mensagens de commit.
+- 🐶 [lint-staged](https://github.com/lint-staged/lint-staged) - Uma ferramenta para rodar scripts de linting e formatação apenas nos arquivos staged para commit.
+
+### Formatação e linting manuais
+Caso seja necessária realizar manualmente ações de linting e formatação, utilize os seguintes comandos:
+
+- <strong>Realizar lint corrigindo os erros encontrados:</strong>
+```
+pnpm lint --fix
+```
+
+- <strong>Realizar lint sem corrigir os erros encontrados:</strong>
+```
+pnpm lint
+```
+
+- <strong>Realizar formatação:</strong>
+```
+pnpm dlx prettier --write src/**
+```
+
 ## 💡 Guia de Contribuição
 
 Obrigado por considerar contribuir para este projeto! Siga as diretrizes abaixo para garantir um processo de contribuição suave.
