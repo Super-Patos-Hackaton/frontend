@@ -31,6 +31,13 @@
           </li>
         </ul>
       </li>
+     <li>
+        <a href="#-lint-e-formatação-do-código">Lint e formatação do Código</a>
+        <ul>
+          <li><a href="#processo-de-pull-request">Processo de Pull Request</a></li>
+          <li><a href="#padrões-de-código">Padrões de Código</a></li>
+        </ul>
+      </li>
       <li>
         <a href="#-guia-de-contribuição">Guia de Contribuição</a>
         <ul>
@@ -69,6 +76,11 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
   npm install npm@latest -g
   ```
 
+- pnpm
+  ```sh
+  npm install -g pnpm
+  ```
+
 ### Instalação
 
 1. Clone o repositório
@@ -85,7 +97,7 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
    ```
 4. Inicie o ambiente de desenvolvimento
    ```sh
-   npm run dev
+   pnpm dev
    ```
 
 ## 🎒 Recursos do Projeto
@@ -94,7 +106,7 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
 
 - Para adicionar um novo componente:
   ```sh
-  npm run ui:add <componente>
+  pnpm ui:add <componente>
   ```
   
 ### Tipografia
@@ -141,7 +153,7 @@ import { Typography } from "@/components/ui/typography"
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-## Lint e formatação do Código
+## 🎨 Lint e formatação do Código
 
 Nesse projeto, serão utilizadas as seguintes ferramentas para linting e formatação:
 
