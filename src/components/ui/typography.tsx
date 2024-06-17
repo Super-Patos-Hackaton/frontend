@@ -45,7 +45,7 @@ const H3 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   )
 }
 
-const P = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
+const P = ({ children, className }: TypographyProps<HTMLParagraphElement>) => {
   return (
     <p
       className={cn(
