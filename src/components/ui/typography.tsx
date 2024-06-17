@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils"
+import { ReactNode } from "react"
 
-interface TypographyProps<_T> {
-  children: ReactNode;
-  className?: string;
+interface TypographyProps<_> {
+  children: ReactNode
+  className?: string
 }
 
 const H1 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
@@ -46,7 +46,7 @@ const H3 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   );
 };
 
-const P = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
+const P = ({ children, className }: TypographyProps<HTMLParagraphElement>) => {
   return (
     <p
       className={cn(
