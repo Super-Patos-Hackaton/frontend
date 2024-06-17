@@ -1,20 +1,14 @@
-import { cn } from "@/lib/utils";
-import { ReactNode, Ref } from "react";
+import { cn } from "@/lib/utils"
+import { ReactNode, Ref } from "react"
 
 interface TypographyProps<T> {
-  children: ReactNode;
-  className: string;
-  ref: Ref<T>;
+  children: ReactNode
+  className?: string
 }
 
-export const H1 = ({
-  children,
-  className,
-  ref,
-}: TypographyProps<HTMLHeadingElement>) => {
+const H1 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h1
-      ref={ref}
       className={cn(
         "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
         className
@@ -22,17 +16,12 @@ export const H1 = ({
     >
       {children}
     </h1>
-  );
-};
+  )
+}
 
-export const H2 = ({
-  children,
-  className,
-  ref,
-}: TypographyProps<HTMLHeadingElement>) => {
+const H2 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h2
-      ref={ref}
       className={cn(
         "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
         className
@@ -40,41 +29,51 @@ export const H2 = ({
     >
       {children}
     </h2>
-  );
-};
+  )
+}
 
-export const H3 = ({
-  children,
-  className,
-  ref,
-}: TypographyProps<HTMLHeadingElement>) => {
+const H3 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h3
-      ref={ref}
       className={cn(
-        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        "scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0",
         className
       )}
     >
       {children}
     </h3>
-  );
-};
+  )
+}
 
-export const p = ({
-  children,
-  className,
-  ref,
-}: TypographyProps<HTMLHeadingElement>) => {
+const P = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <p
-      ref={ref}
       className={cn(
-        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        "scroll-m-20 border-b pb-2 text-base font-normal tracking-tight first:mt-0",
         className
       )}
     >
       {children}
     </p>
-  );
-};
+  )
+}
+
+const Lead = ({
+  children,
+  className
+}: TypographyProps<HTMLParagraphElement>) => {
+  return (
+    <p className={cn("text-xl text-muted-foreground", className)}>{children}</p>
+  )
+}
+
+const Muted = ({
+  children,
+  className
+}: TypographyProps<HTMLParagraphElement>) => {
+  return (
+    <p className={cn("text-sm text-muted-foreground", className)}>{children}</p>
+  )
+}
+
+export const Typography = { H1, H2, H3, P, Lead, Muted }
