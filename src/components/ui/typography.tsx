@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
-import { ReactNode, Ref } from "react"
+import { ReactNode } from "react"
 
-interface TypographyProps<T> {
+interface TypographyProps<_> {
   children: ReactNode
   className?: string
 }
