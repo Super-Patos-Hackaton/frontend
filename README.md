@@ -76,12 +76,39 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
    npm run dev
    ```
 
+## Como usar
+
 ### Componentes shadcn/ui
 
 * Para adicionar um novo componente:
   ```sh
   npm run ui:add <componente>
   ```
+  
+### Tipografia
+
+Para o projeto inteiro, utilizaremos a fonte Geist, desenvolvida pela Vercel. Detalhes sobre os termos de uso podem ser encontrados aqui: <a href="https://github.com/vercel/geist-font/blob/main/LICENSE.txt>Licença GEIST</a>.
+
+As Headings H1, H2 e H3 estarão presentes no projeto. Destas, é importante ressaltar que a H1 deverá conter apenas uma instância por página.
+
+Foram configuradas também as tags p, lead e muted para usos textuais diversos.
+
+Para utilização dos componentes com tipografias configuradas, utilizaremos a seguinte padronização:
+
+* Importação do componente:
+```js
+import { Typography } from "@/components/ui/typography"
+```
+* Utilização das tags dentro do tsx:
+1. H1, H2, H3, p, lead e muted
+```js
+<Typography.H1>Título 01</Typography.H1>
+<Typography.H2>Título 02</Typography.H2>
+<Typography.H3>Título 03</Typography.H3>
+<Typography.P>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography.P>
+<Typography.Lead>Vivamus dignissim accumsan velit, vitae facilisis dui accumsan ac.</Typography.Lead>
+<Typography.Muted>Cras maximus placerat velit eget posuere. Vestibulum scelerisque</Typography.Muted>
+```
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
