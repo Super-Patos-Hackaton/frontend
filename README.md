@@ -102,11 +102,12 @@ As Headings H1, H2 e H3 estarão presentes no projeto. Destas, é importante res
 
 Foram configuradas também as tags p, lead e muted para usos textuais diversos.
 
-1. Importação do componente:
+#### 1. Importação do componente:
 ```js
 import { Typography } from "@/components/ui/typography"
 ```
-2. Utilização das tags dentro do tsx:
+#### 2. Utilização das tags dentro do tsx:
+
 <strong>Tag h1</strong>
 ```js
 <Typography.H1>Título h1.</Typography.H1>
