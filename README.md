@@ -12,7 +12,7 @@
     <li>
       <a href="#-sobre-o-projeto">Sobre o projeto</a>
       <ul>
-        <li><a href="#feito-com">Feito com</a></li>
+        <li><a href="#-feito-com">Feito com</a></li>
       </ul>
     </li>
     <li>
@@ -93,7 +93,7 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
   
 ### Tipografia
 
-Para o projeto inteiro, utilizaremos a fonte Geist, desenvolvida pela Vercel. Detalhes sobre os termos de uso podem ser encontrados aqui: <a href="https://github.com/vercel/geist-font/blob/main/LICENSE.txt">Licença GEIST</a>.
+Para o projeto inteiro, utilizaremos a fonte Geist, desenvolvida pela Vercel. Detalhes sobre os termos de uso podem ser encontrados aqui: <a href="https://github.com/vercel/geist-font/blob/main/LICENSE.txt" target="_blank">Licença GEIST</a>.
 
 As Headings H1, H2 e H3 estarão presentes no projeto. Destas, é importante ressaltar que a H1 deverá conter apenas uma instância por página.
 
