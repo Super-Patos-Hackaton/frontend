@@ -96,13 +96,13 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
   
 ### Tipografia
 
-<details>
 Para o projeto inteiro, utilizaremos a fonte Geist, desenvolvida pela Vercel. Detalhes sobre os termos de uso podem ser encontrados aqui: <a href="https://github.com/vercel/geist-font/blob/main/LICENSE.txt">Licença GEIST</a>.
 
 As Headings H1, H2 e H3 estarão presentes no projeto. Destas, é importante ressaltar que a H1 deverá conter apenas uma instância por página.
 
 Foram configuradas também as tags p, lead e muted para usos textuais diversos.
 
+<details>
 #### 1. Importação do componente:
 ```js
 import { Typography } from "@/components/ui/typography"
