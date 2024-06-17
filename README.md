@@ -12,7 +12,7 @@
     <li>
       <a href="#-sobre-o-projeto">Sobre o projeto</a>
       <ul>
-        <li><a href="#feito-com">Feito com</a></li>
+        <li><a href="#%EF%B8%8F-feito-com">Feito com</a></li>
       </ul>
     </li>
     <li>
@@ -47,7 +47,6 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-
 ### 🖥️ Feito com
 
 * [![Next][Next.js]][Next-url]
@@ -57,8 +56,6 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
 
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## 🔥 Como rodar o projeto
@@ -96,11 +93,13 @@ Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplific
   
 ### Tipografia
 
-Para o projeto inteiro, utilizaremos a fonte Geist, desenvolvida pela Vercel. Detalhes sobre os termos de uso podem ser encontrados aqui: <a href="https://github.com/vercel/geist-font/blob/main/LICENSE.txt>Licença GEIST</a>.
+Para o projeto inteiro, utilizaremos a fonte Geist, desenvolvida pela Vercel. Detalhes sobre os termos de uso podem ser encontrados aqui: <a href="https://github.com/vercel/geist-font/blob/main/LICENSE.txt" target="_blank">Licença GEIST</a>.
 
 As Headings H1, H2 e H3 estarão presentes no projeto. Destas, é importante ressaltar que a H1 deverá conter apenas uma instância por página.
 
 Foram configuradas também as tags p, lead e muted para usos textuais diversos.
+
+<details>
 
 #### 1. Importação do componente:
 ```js
@@ -132,6 +131,7 @@ import { Typography } from "@/components/ui/typography"
 ```js
 <Typography.Muted>Parágrafo que precisa ter destaque inferior a todos os outros.</Typography.Muted>
 ```
+</details>
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
