@@ -12,7 +12,7 @@
     <li>
       <a href="#-sobre-o-projeto">Sobre o projeto</a>
       <ul>
-        <li><a href="#-feito-com">Feito com</a></li>
+        <li><a href="#%EF%B8%8F-feito-com">Feito com</a></li>
       </ul>
     </li>
     <li>
