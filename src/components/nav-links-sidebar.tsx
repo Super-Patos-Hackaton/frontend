@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -17,7 +19,7 @@ export const NavLinksSidebar = () => {
   const sidebar = useStore(useSidebarToggle, (state) => state);
 
   return (
-    <div className='mt-4 flex h-full w-full flex-col items-center justify-between tracking-normal'>
+    <>
       <div className='flex w-full flex-col gap-3'>
         {navLinks.map(({ href, icon: Icon, label }, index) => (
           <div key={href + index} className='w-full'>
@@ -75,6 +77,6 @@ export const NavLinksSidebar = () => {
           </p>
         </Button>
       </div>
-    </div>
+    </>
   );
 };
