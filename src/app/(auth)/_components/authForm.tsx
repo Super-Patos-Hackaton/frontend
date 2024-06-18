@@ -16,17 +16,24 @@ export default function AuthForm() {
   return (
     <form onSubmit={handleSubmit} className='m-auto flex w-1/3 flex-col gap-4'>
       {/* Email Input */}
-      <Input type='email' name='email' placeholder='Email' required />
+      <Input
+        data-testid='email-input-test'
+        type='email'
+        name='email'
+        placeholder='Email'
+        required
+      />
       {/* Password Input */}
       <div>
         <Input
+          data-testid='password-input-test'
           type='password'
           name='password'
           placeholder='Password'
           required
         />
         {/* Recovery Password Link */}
-        <Link href='/recovery'>
+        <Link href='/recovery' data-testid='recovery-link-test'>
           <Typography.Muted>
             {pathName.includes('login') && 'Recuperar a senha'}
           </Typography.Muted>
@@ -36,6 +43,7 @@ export default function AuthForm() {
       <Button
         type='submit'
         size='lg'
+        data-testid='submit-button-test'
         className='w-full rounded-lg text-lg uppercase'
       >
         Entrar
