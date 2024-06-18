@@ -52,7 +52,7 @@ export const NavLinksSidebar = () => {
       <div className='w-full'>
         <Button
           className={cn(
-            'mb-1 h-10 w-full items-center justify-start bg-transparent hover:bg-brand-400/15',
+            'mb-1 h-10 w-full items-center justify-start bg-transparent text-red-400 hover:bg-brand-400/15',
             !sidebar?.isOpen && 'block'
           )}
         >
