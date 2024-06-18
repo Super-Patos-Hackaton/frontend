@@ -2,24 +2,24 @@
 
 import Image from 'next/image';
 
-import { NavLinksSidebar } from '@/components/nav-links-sidebar';
 import { Button } from '@/components/ui/button';
+import { Typography } from '@/components/ui/typography';
 
 import { cn } from '@/lib/utils';
 
 import { useSidebarToggle } from '@/hooks/use-sidebar-toggle';
 import { useStore } from '@/hooks/use-store';
 
-import { LogOut, PanelLeftClose, PanelRightClose } from 'lucide-react';
+import { PanelLeftClose, PanelRightClose } from 'lucide-react';
 
-import { Typography } from './typography';
 import WhiteLogo from '/public/img/white-logo.png';
 
-export const Sidebar = () => {
+export const Sidebar = ({ navLinks }: { navLinks: React.ReactNode }) => {
   const sidebar = useStore(useSidebarToggle, (state) => state);
 
   return (
     <aside
+      data-testid='container'
       className={cn(
         'fixed left-0 top-0 z-20 h-screen -translate-x-full transition-[width] duration-300 ease-in-out lg:translate-x-0',
         sidebar?.isOpen === false ? 'w-[76px]' : 'w-80'
@@ -46,6 +46,7 @@ export const Sidebar = () => {
           </div>
 
           <Button
+            data-testid='sidebar-toggle'
             variant='ghost'
             onClick={() => sidebar?.setIsOpen()}
             className={cn(
@@ -64,7 +65,9 @@ export const Sidebar = () => {
           </Button>
         </header>
 
-        <NavLinksSidebar />
+        <div className='mt-4 flex h-full w-full flex-col items-center justify-between tracking-normal'>
+          {navLinks}
+        </div>
       </div>
     </aside>
   );
