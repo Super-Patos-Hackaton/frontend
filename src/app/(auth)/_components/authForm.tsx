@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/router';
 import { FormEvent } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -10,11 +9,8 @@ import { Typography } from '@/components/ui/typography';
 export default function AuthForm() {
   const pathName = usePathname();
 
-  //const router = useRouter();
-
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    //console.log('form submitted');
   }
 
   return (
