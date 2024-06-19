@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 
 import { navLinks } from '@/config/nav-links';
 
@@ -38,7 +38,7 @@ export const NavLinksSidebar = () => {
                 <p
                   className={cn(
                     'max-w-[200px] truncate text-base',
-                    sidebar?.isOpen === false
+                    !sidebar?.isOpen
                       ? '-translate-x-96 opacity-0'
                       : 'translate-x-0 opacity-100'
                   )}

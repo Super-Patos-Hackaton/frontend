@@ -1,8 +1,5 @@
-import { NavLinksSidebar } from '@/components/nav-links-sidebar';
-
 import { fireEvent, render, screen } from '@testing-library/react';
 
-import { debug } from 'console';
 import { describe, expect, it } from 'vitest';
 
 import { Sidebar } from '.';
@@ -14,8 +11,6 @@ describe('Sidebar Component', () => {
         <Sidebar navLinks={<button>Hello</button>} />
       </div>
     );
-
-    debug();
 
     const logo = screen.getByAltText(/Desafios do Pato - Logo/i);
     const title = screen.getByRole('heading', {
