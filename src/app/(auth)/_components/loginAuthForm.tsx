@@ -1,21 +1,21 @@
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { FormEvent } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Typography } from '@/components/ui/typography';
 
-const AuthForm = () => {
-  const pathName = usePathname();
-
+const LoginAuthForm = () => {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
   }
 
   return (
-    <form onSubmit={handleSubmit} className='m-auto flex w-1/3 flex-col gap-4'>
-      {/* Email Input */}
+    <form
+      data-testid='login-form'
+      onSubmit={handleSubmit}
+      className='m-auto flex w-1/3 flex-col gap-4'
+    >
       <Input
         data-testid='email-input-test'
         type='email'
@@ -23,7 +23,6 @@ const AuthForm = () => {
         placeholder='Email'
         required
       />
-      {/* Password Input */}
       <div>
         <Input
           data-testid='password-input-test'
@@ -32,14 +31,10 @@ const AuthForm = () => {
           placeholder='Password'
           required
         />
-        {/* Recovery Password Link */}
         <Link href='/recovery' data-testid='recovery-link-test'>
-          <Typography.Muted>
-            {pathName.includes('login') && 'Recuperar a senha'}
-          </Typography.Muted>
+          <Typography.Muted>Recuperar a senha</Typography.Muted>
         </Link>
       </div>
-      {/* Form Submit Button */}
       <Button
         type='submit'
         size='lg'
@@ -52,4 +47,4 @@ const AuthForm = () => {
   );
 };
 
-export default AuthForm;
+export default LoginAuthForm;
