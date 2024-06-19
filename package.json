@@ -27,7 +27,8 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
@@ -62,7 +63,7 @@
   },
   "lint-staged": {
     "*": [
-      "prettier --list-different"
+      "prettier --write"
     ],
     "**/*.{ts,tsx,js,jsx,cjs,mjs}": [
       "eslint"
