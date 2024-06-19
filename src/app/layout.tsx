@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 import { cn } from '@/lib/utils';
 
-import { fontMono, fontSans } from '@/styles/fonts';
+import { fontAcme, fontMono, fontSans } from '@/styles/fonts';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang='pt-BR' suppressHydrationWarning>
-      <body className={cn(fontSans, fontMono)}>
+      <body className={cn(fontSans, fontMono, fontAcme)}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           {children}
         </ThemeProvider>

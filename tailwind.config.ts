@@ -15,8 +15,22 @@ const config = {
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
+        heading: ['var(--font-acme)'],
       },
       colors: {
+        brand: {
+          '50': '#fdf6ef',
+          '100': '#faebda',
+          '200': '#f5d3b3',
+          '300': '#eeb583',
+          '400': '#e68d51',
+          '500': '#e06f2f',
+          '600': '#da5d28',
+          '700': '#ae4320',
+          '800': '#8b3621',
+          '900': '#702f1e',
+          '950': '#3c160e',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
