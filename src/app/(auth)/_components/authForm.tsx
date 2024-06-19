@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Typography } from '@/components/ui/typography';
 
-export default function AuthForm() {
+const AuthForm = () => {
   const pathName = usePathname();
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -50,4 +50,6 @@ export default function AuthForm() {
       </Button>
     </form>
   );
-}
+};
+
+export default AuthForm;

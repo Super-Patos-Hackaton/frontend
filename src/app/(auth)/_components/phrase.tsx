@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 
-export const Phrase = () => {
+const Phrase = () => {
   const pathName = usePathname();
 
   return (
@@ -13,3 +13,5 @@ export const Phrase = () => {
     </span>
   );
 };
+
+export { Phrase };

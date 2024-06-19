@@ -10,7 +10,7 @@ interface LoginLayoutProps {
   children: ReactNode;
 }
 
-export default function LoginLayout({ children }: LoginLayoutProps) {
+const LoginLayout = ({ children }: LoginLayoutProps) => {
   return (
     <div className='grid h-screen grid-cols-2'>
       <div className='flex h-full flex-col items-center justify-center bg-login-background-image bg-cover'>
@@ -22,4 +22,6 @@ export default function LoginLayout({ children }: LoginLayoutProps) {
       </div>
     </div>
   );
-}
+};
+
+export default LoginLayout;
