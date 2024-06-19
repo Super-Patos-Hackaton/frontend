@@ -22,7 +22,7 @@ export const Sidebar = ({ navLinks }: { navLinks: React.ReactNode }) => {
       data-testid='container'
       className={cn(
         'fixed left-0 top-0 z-20 h-screen -translate-x-full transition-[width] duration-300 ease-in-out lg:translate-x-0',
-        sidebar?.isOpen === false ? 'w-[76px]' : 'w-80'
+        !sidebar?.isOpen ? 'w-[76px]' : 'w-80'
       )}
     >
       <div className='relative flex h-full flex-col items-center overflow-y-auto overflow-x-hidden px-3 py-4 shadow-md dark:bg-secondary/25 dark:shadow-foreground/10'>
@@ -30,7 +30,7 @@ export const Sidebar = ({ navLinks }: { navLinks: React.ReactNode }) => {
           <div
             className={cn(
               'flex w-full items-center gap-2 transition',
-              sidebar?.isOpen === false ? '-translate-x-96' : 'translate-x-0'
+              !sidebar?.isOpen ? '-translate-x-96' : 'translate-x-0'
             )}
           >
             <Image
@@ -52,7 +52,7 @@ export const Sidebar = ({ navLinks }: { navLinks: React.ReactNode }) => {
             className={cn(
               'px-3.5',
               'mb-1 text-brand-100 transition-transform duration-300 ease-in-out hover:text-brand-100',
-              sidebar?.isOpen === false
+              !sidebar?.isOpen
                 ? '-translate-x-[60px]'
                 : '-translate-x-0 self-end'
             )}
