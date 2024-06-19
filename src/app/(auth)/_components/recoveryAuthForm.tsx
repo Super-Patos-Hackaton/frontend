@@ -1,25 +1,35 @@
 import { FormEvent } from 'react';
+import { useForm } from 'react-hook-form';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
+import { zodResolver } from '@hookform/resolvers/zod';
+
+import { z } from 'zod';
+
+const recoveryFormSchema = z.object({
+  email: z.string(),
+});
+
+type RecoveryFormSchema = z.infer<typeof recoveryFormSchema>;
+
 const RecoveryAuthForm = () => {
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-  }
+  const { register, handleSubmit } = useForm<RecoveryFormSchema>({
+    resolver: zodResolver(recoveryFormSchema),
+  });
 
   return (
     <form
       data-testid='recovery-form'
-      onSubmit={handleSubmit}
       className='m-auto flex w-1/3 flex-col gap-4'
     >
       <Input
         data-testid='email-input-test'
         type='email'
-        name='email'
         placeholder='Email'
         required
+        {...register('email')}
       />
       <Button
         type='submit'
