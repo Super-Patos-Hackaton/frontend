@@ -22,7 +22,7 @@ const UserLevel = (scoreProps: ScoreProps) => {
           <div className='flex flex-col items-center justify-center border-r-2 border-brand-400 py-12'>
             <h2 className='text-4xl font-bold uppercase'>Bichinho</h2>
             <h2 className='text-4xl font-bold uppercase'>
-              Nível <span className='text-brand-400'>{level}</span>
+              Nível <span className='text-brand-500'>{level}</span>
             </h2>
           </div>
         </div>
