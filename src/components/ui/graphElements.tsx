@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 
-interface Score<_> {
+interface Value<_> {
   children: ReactNode;
 }
 
-const CircularProgress = ({ children }: Score<number>) => {
+const CircularProgress = ({ children }: Value<number>) => {
   return (
-    <div className='relative h-80 w-80 max-w-[288px]'>
+    <div className='relative max-w-[268px] p-5'>
       <svg className='h-full w-full' viewBox='0 0 100 100'>
         <circle
           className='stroke-current text-brand-300'
