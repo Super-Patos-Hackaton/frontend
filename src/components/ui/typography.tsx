@@ -77,4 +77,15 @@ const Muted = ({
   );
 };
 
-export const Typography = { H1, H2, H3, P, Lead, Muted };
+const Error = ({
+  children,
+  className,
+}: TypographyProps<HTMLParagraphElement>) => {
+  return (
+    <p className={cn('text-sm text-muted-foreground text-red-500', className)}>
+      {children}
+    </p>
+  );
+};
+
+export const Typography = { H1, H2, H3, P, Lead, Muted, Error };
