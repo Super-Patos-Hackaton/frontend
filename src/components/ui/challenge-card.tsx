@@ -10,14 +10,14 @@ import { Typography } from './typography';
 
 interface ChallengeEventCardProps {
   isAnEvent: boolean;
-  eventStart: Date | string;
-  eventEnd: Date | string;
+  eventStartDate: Date | string;
+  eventEndDate: Date | string;
 }
 
 interface ChallengeEventCardRefProps {
   isAnEvent?: never;
-  eventStart?: undefined;
-  eventEnd?: undefined;
+  eventStartDate?: undefined;
+  eventEndDate?: undefined;
 }
 
 interface ChallengeCardProps {
@@ -41,8 +41,8 @@ export const ChallengeCard = ({
   techs,
   description,
   challengeLevel,
-  eventStart,
-  eventEnd,
+  eventStartDate,
+  eventEndDate,
   isAnEvent,
 }: ChallengeCardProps & ChallengeEventCard) => {
   return (
@@ -75,7 +75,7 @@ export const ChallengeCard = ({
 
         {isAnEvent && (
           <Typography.Muted className='absolute bottom-6 left-1/2 z-10 w-fit -translate-x-1/2 text-nowrap text-xs'>
-            {`${format(eventStart, 'short', 'br')} - ${format(eventEnd, 'short', 'br')}`}
+            {`${format(eventStartDate, 'short', 'br')} - ${format(eventEndDate, 'short', 'br')}`}
           </Typography.Muted>
         )}
       </div>
