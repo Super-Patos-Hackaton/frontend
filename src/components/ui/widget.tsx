@@ -1,11 +1,13 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 interface CardContent {
   children: ReactNode;
 }
 
 const Widget = ({ children }: CardContent) => {
-  return <div className='w-[576px] rounded-xl bg-secondary'>{children}</div>;
+  return (
+    <div className='max-w-[576px] rounded-xl bg-secondary'>{children}</div>
+  );
 };
 
 export default Widget;

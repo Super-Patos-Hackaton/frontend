@@ -1,10 +1,8 @@
-import React, { ReactNode } from 'react';
-
-interface Value<_> {
-  children: ReactNode;
+interface GraphProps {
+  children: number;
 }
 
-const CircularProgress = ({ children }: Value<number>) => {
+const CircularProgress = ({ children }: GraphProps) => {
   return (
     <div className='relative max-w-[268px] p-5'>
       <svg className='h-full w-full' viewBox='0 0 100 100'>
@@ -30,7 +28,7 @@ const CircularProgress = ({ children }: Value<number>) => {
         ></circle>
 
         <text
-          className='flex content-center items-center fill-[#fdf6ef] text-lg font-semibold'
+          className='flex content-center items-center fill-foreground text-lg font-semibold'
           x='50'
           y='50'
           textAnchor='middle'
@@ -43,4 +41,4 @@ const CircularProgress = ({ children }: Value<number>) => {
   );
 };
 
-export const GraphElements = { CircularProgress };
+export { CircularProgress };
