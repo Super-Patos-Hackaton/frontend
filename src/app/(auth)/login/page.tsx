@@ -1,5 +1,6 @@
 'use client';
 
+import { ThemeSwitcher } from '@/components/theme-switcher';
 import { Typography } from '@/components/ui/typography';
 
 import LoginAuthForm from '../_components/loginAuthForm';
