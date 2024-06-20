@@ -9,11 +9,13 @@ import RecoveryAuthForm from './recoveryAuthForm';
 describe('RecoveryAuthForm', () => {
   it('renders the form component', () => {
     render(<RecoveryAuthForm />);
+
     const form = screen.getByTestId('recovery-form');
-    expect(form).toBeInTheDocument();
     const email = screen.getByTestId('email-input-test');
-    expect(email).toBeInTheDocument();
     const submitButton = screen.getByTestId('submit-button-test');
+
+    expect(form).toBeInTheDocument();
+    expect(email).toBeInTheDocument();
     expect(submitButton).toBeInTheDocument();
   });
 });
