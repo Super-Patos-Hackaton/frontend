@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
-interface CardContent {
+interface WidgetProps {
   children: ReactNode;
 }
 
-const Widget = ({ children }: CardContent) => {
+const Widget = ({ children }: WidgetProps) => {
   return (
     <div className='max-w-[576px] rounded-xl bg-secondary'>{children}</div>
   );
