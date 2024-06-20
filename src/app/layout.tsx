@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   description: 'Plataforma de gestão de desafios',
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang='pt-BR' suppressHydrationWarning>
       <body className={cn(fontSans, fontMono, fontAcme)}>
@@ -26,4 +26,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

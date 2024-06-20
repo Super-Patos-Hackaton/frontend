@@ -65,6 +65,10 @@ const config = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
+      backgroundImage: {
+        'login-background-image':
+          "url('/img/login-background-image-blur.webp')",
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',

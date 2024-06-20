@@ -1,10 +1,10 @@
+import { ReactNode } from 'react';
 
-import { cn } from "@/lib/utils"
-import { ReactNode } from "react"
+import { cn } from '@/lib/utils';
 
 interface TypographyProps<_> {
-  children: ReactNode
-  className?: string
+  children: ReactNode;
+  className?: string;
 }
 
 const H1 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
@@ -24,7 +24,7 @@ const H2 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h2
       className={cn(
-        'scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0',
+        'scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0',
         className
       )}
     >
@@ -37,7 +37,7 @@ const H3 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h3
       className={cn(
-        'scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0',
+        'scroll-m-20 pb-2 text-2xl font-semibold tracking-tight first:mt-0',
         className
       )}
     >
@@ -50,7 +50,7 @@ const P = ({ children, className }: TypographyProps<HTMLParagraphElement>) => {
   return (
     <p
       className={cn(
-        'scroll-m-20 border-b pb-2 text-base font-normal tracking-tight first:mt-0',
+        'scroll-m-20 pb-2 text-base font-normal tracking-tight first:mt-0',
         className
       )}
     >
@@ -77,4 +77,15 @@ const Muted = ({
   );
 };
 
-export const Typography = { H1, H2, H3, P, Lead, Muted };
+const Error = ({
+  children,
+  className,
+}: TypographyProps<HTMLParagraphElement>) => {
+  return (
+    <p className={cn('text-sm text-muted-foreground text-red-500', className)}>
+      {children}
+    </p>
+  );
+};
+
+export const Typography = { H1, H2, H3, P, Lead, Muted, Error };

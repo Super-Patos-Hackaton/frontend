@@ -4,7 +4,7 @@ import { ThemeSwitcher } from '@/components/theme-switcher';
 
 import logo from '/public/img/logo.png';
 
-export default function Home() {
+const Home = () => {
   return (
     <main className='flex min-h-screen flex-col items-center justify-center'>
       <Image src={logo} alt='Quack Visual!' className='aspect-auto size-32' />
@@ -15,4 +15,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;
