@@ -15,6 +15,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@formkit/tempo": "^0.1.1",
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.6.0",
     "@radix-ui/react-slot": "^1.0.2",
