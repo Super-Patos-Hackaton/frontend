@@ -8,6 +8,15 @@ export const user = {
   bio: faker.lorem.paragraph(),
   animal: faker.animal.type(),
   createdAt: new Date('02-02-2024'),
-  techs: ['react', 'nextjs', 'typescript', 'tailwind', 'figma'] as const,
+  techs: [
+    'html',
+    'css',
+    'javascript',
+    'react',
+    'nextjs',
+    'typescript',
+    'tailwind',
+    'figma',
+  ] as const,
   badges: ['medal', 'firstPlace', 'aPlus'] as const,
 };
