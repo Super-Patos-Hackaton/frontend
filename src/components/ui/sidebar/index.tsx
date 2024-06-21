@@ -26,7 +26,7 @@ export const Sidebar = ({ navLinks }: { navLinks: React.ReactNode }) => {
       )}
     >
       <div className='relative flex h-full flex-col items-center overflow-y-auto overflow-x-hidden px-3 py-4 shadow-md dark:bg-secondary dark:shadow-foreground/10'>
-        <header className='0 flex h-12 w-full items-center justify-between gap-2 border-b border-muted'>
+        <header className='0 flex h-12 w-full items-center justify-between gap-2 border-b border-brand-300/5'>
           <div
             className={cn(
               'flex w-full items-center gap-2 transition',
