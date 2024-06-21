@@ -1,8 +1,8 @@
 interface GraphProps {
-  percentage: number;
+  nextLevel: number;
 }
 
-const CircularProgress = ({ percentage }: GraphProps) => {
+const CircularProgress = ({ nextLevel }: GraphProps) => {
   return (
     <div className='relative max-w-[268px] p-5'>
       <svg className='h-full w-full' viewBox='0 0 100 100'>
@@ -24,7 +24,7 @@ const CircularProgress = ({ percentage }: GraphProps) => {
           r='40'
           fill='transparent'
           strokeDasharray='251.2'
-          strokeDashoffset={`calc(251.2 - (251.2 * ${percentage}) / 100)`}
+          strokeDashoffset={`calc(251.2 - (251.2 * ${nextLevel}) / 100)`}
         ></circle>
 
         <text
@@ -34,11 +34,15 @@ const CircularProgress = ({ percentage }: GraphProps) => {
           textAnchor='middle'
           alignmentBaseline='middle'
         >
-          {percentage}%
+          {nextLevel}%
         </text>
       </svg>
     </div>
   );
 };
 
-export { CircularProgress };
+const BarProgress = () => {
+  return;
+};
+
+export { CircularProgress, BarProgress };

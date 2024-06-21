@@ -7,12 +7,12 @@ import { CircularProgress } from '@/components/ui/graphElements';
 import Widget from './ui/widget';
 
 interface ScoreProps {
-  score: number;
+  nextLevel: number;
   level: number;
 }
 
 const UserLevel = (scoreProps: ScoreProps) => {
-  const [score] = useState<number>(scoreProps.score);
+  const [nextLevel] = useState<number>(scoreProps.nextLevel);
   const [level] = useState<number>(scoreProps.level);
 
   return (
@@ -27,7 +27,7 @@ const UserLevel = (scoreProps: ScoreProps) => {
           </div>
         </div>
         <div className='flex items-center justify-center'>
-          <CircularProgress>{score}</CircularProgress>
+          <CircularProgress>{nextLevel}</CircularProgress>
         </div>
       </div>
     </Widget>
