@@ -95,7 +95,7 @@ export const ChallengeCard = ({
           ))}
         </div>
 
-        <Typography.P className='mt-2 max-w-96 text-base text-sm text-brand-50'>
+        <Typography.P className='mt-2 max-w-96 text-sm text-brand-50'>
           {description.substring(0, 170).concat('...')}
         </Typography.P>
       </div>
