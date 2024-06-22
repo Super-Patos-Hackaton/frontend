@@ -118,7 +118,7 @@ export const IconTechs = {
             r='87'
             fill='black'
             stroke='white'
-            stroke-width='6'
+            strokeWidth='6'
           />
           <path
             d='M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z'
@@ -141,8 +141,8 @@ export const IconTechs = {
             y2='160.5'
             gradientUnits='userSpaceOnUse'
           >
-            <stop stop-color='white' />
-            <stop offset='1' stop-color='white' stop-opacity='0' />
+            <stop stopColor='white' />
+            <stop offset='1' stopColor='white' stopOpacity='0' />
           </linearGradient>
           <linearGradient
             id='paint1_linear_408_139'
@@ -152,8 +152,8 @@ export const IconTechs = {
             y2='106.875'
             gradientUnits='userSpaceOnUse'
           >
-            <stop stop-color='white' />
-            <stop offset='1' stop-color='white' stop-opacity='0' />
+            <stop stopColor='white' />
+            <stop offset='1' stopColor='white' stopOpacity='0' />
           </linearGradient>
         </defs>
       </svg>
@@ -177,8 +177,8 @@ export const IconTechs = {
             y2='67.556%'
             id='gradient'
           >
-            <stop stop-color='#2298BD' offset='0%'></stop>
-            <stop stop-color='#0ED7B5' offset='100%'></stop>
+            <stop stopColor='#2298BD' offset='0%'></stop>
+            <stop stopColor='#0ED7B5' offset='100%'></stop>
           </linearGradient>
         </defs>
         <path
@@ -198,7 +198,7 @@ export const IconTechs = {
         xmlns='http://www.w3.org/2000/svg'
         {...props}
       >
-        <g clip-path='url(#clip0_912_3)'>
+        <g clipPath='url(#clip0_912_3)'>
           <path
             d='M13.3333 80.0002C20.6933 80.0002 26.6667 74.0268 26.6667 66.6668V53.3335H13.3333C5.97333 53.3335 0 59.3068 0 66.6668C0 74.0268 5.97333 80.0002 13.3333 80.0002Z'
             fill='#0ACF83'
