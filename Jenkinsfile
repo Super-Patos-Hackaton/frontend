@@ -18,14 +18,17 @@ pipeline {
         }
     }
     post {
-        always {
-            archiveArtifacts artifacts: '**/eslint-report.html', allowEmptyArchive: true
-        }
         success {
-            echo 'Linting passed!'
+            script {
+                def commitHash = sh(script: 'git rev-parse HEAD', returnStdout: true).trim()
+                githubNotify context: 'jenkins/lint', status: 'SUCCESS', description: 'Linting passed!', sha: commitHash
+            }
         }
         failure {
-            echo 'Linting failed!'
+            script {
+                def commitHash = sh(script: 'git rev-parse HEAD', returnStdout: true).trim()
+                githubNotify context: 'jenkins/lint', status: 'FAILURE', description: 'Linting failed!', sha: commitHash
+            }
         }
     }
 }
