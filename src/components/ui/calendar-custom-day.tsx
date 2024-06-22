@@ -18,7 +18,7 @@ const CalendarCustomDay = (props: DayContentProps) => {
     <span className='relative overflow-visible'>
       {props.date.getDate()}
       {challengesOnDay.length > 0 && (
-        <div className='absolute -right-2 -top-1 h-1 w-1 rounded-full bg-blue-500'></div>
+        <div className='absolute -right-2 -top-1 h-[6px] w-[6px] rounded-full bg-blue-500'></div>
       )}
     </span>
   );
