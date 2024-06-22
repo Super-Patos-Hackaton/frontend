@@ -25,6 +25,14 @@ const ChallengesCalendar = ({ className }: ChallengesCalendarProps) => {
     locale: ptBR,
   }).split(',');
 
+  const limitTitle = (title: string) => {
+    if (title.length > 35) {
+      return title.substring(0, 35).concat('...');
+    } else {
+      return title;
+    }
+  };
+
   const challengesData = useMemo(() => {
     return calendar.challengesDeadline
       ?.filter(
@@ -35,13 +43,15 @@ const ChallengesCalendar = ({ className }: ChallengesCalendarProps) => {
       )
       .map((challenge) => (
         <li className='text-xs text-brand-500' key={challenge.title}>
-          <Link href={`/challenge/${challenge.id}`}>{challenge.title}</Link>
+          <Link href={`/challenge/${challenge.id}`}>
+            {limitTitle(challenge.title)}
+          </Link>
         </li>
       ));
   }, [calendar.challengesDeadline, calendar.date]);
 
   return (
-    <div className={cn('h-[608px] w-80', className)}>
+    <div className={cn('h-full w-80', className)}>
       <div className='flex h-[40%] flex-col justify-between rounded-t-lg bg-brand-500 px-6 py-3'>
         <Typography.P className='text-xs uppercase text-secondary'>
           Entrega de desafios
@@ -62,7 +72,7 @@ const ChallengesCalendar = ({ className }: ChallengesCalendarProps) => {
         </Typography.H2>
       </div>
       <div className='flex h-[60%] flex-col gap-4 rounded-b-lg bg-secondary px-3 pb-4 pt-5'>
-        <Calendar mode='single' />
+        <Calendar />
       </div>
     </div>
   );
