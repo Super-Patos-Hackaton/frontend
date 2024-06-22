@@ -1,7 +1,5 @@
 'use client';
 
-import React, { useState } from 'react';
-
 import { CircularProgress } from '@/components/ui/graphElements';
 
 import Widget from './ui/widget';
@@ -11,11 +9,7 @@ interface UserLevelProps {
   level: number;
 }
 
-const UserLevel = (userLevelProps: UserLevelProps) => {
-  const [nextLevelPercentage] = useState<number>(
-    userLevelProps.nextLevelPercentage
-  );
-
+const UserLevel = ({ nextLevelPercentage, level }: UserLevelProps) => {
   return (
     <Widget>
       <div className='grid grid-cols-2'>
@@ -23,8 +17,7 @@ const UserLevel = (userLevelProps: UserLevelProps) => {
           <div className='flex flex-col items-center justify-center border-r-2 border-brand-400 py-12'>
             <h2 className='text-4xl font-bold'>Bichinho</h2>
             <h2 className='text-4xl font-bold'>
-              Nível{' '}
-              <span className='text-brand-500'>{userLevelProps.level}</span>
+              Nível <span className='text-brand-500'>{level}</span>
             </h2>
           </div>
         </div>

@@ -12,9 +12,10 @@ interface ChallengesCompletionProps {
   nextChallengeDate: string;
 }
 
-const ChallengesCompletion = (
-  challengesCompletionProps: ChallengesCompletionProps
-) => {
+const ChallengesCompletion = ({
+  totalChallengePercentage,
+  nextChallengeDate,
+}: ChallengesCompletionProps) => {
   return (
     <Widget>
       <div className='content-around px-6 py-12'>
@@ -27,9 +28,7 @@ const ChallengesCompletion = (
               />
             </div>
             <div className='flex-cols flex items-center justify-center'>
-              <h3 className='text-5xl'>
-                {challengesCompletionProps.totalChallengePercentage}%
-              </h3>
+              <h3 className='text-5xl'>{totalChallengePercentage}%</h3>
             </div>
           </div>
         </div>
@@ -37,9 +36,7 @@ const ChallengesCompletion = (
           <div className='items- col-span-2 flex items-center font-bold'>
             <p className='text-brand-300'>
               Data da próxima entrega:{' '}
-              <span className='text-brand-400'>
-                {challengesCompletionProps.nextChallengeDate}
-              </span>
+              <span className='text-brand-400'>{nextChallengeDate}</span>
             </p>
           </div>
           <div className='flex items-center justify-center'>
