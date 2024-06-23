@@ -3,17 +3,17 @@ import { Home, Swords, User } from 'lucide-react';
 export const navLinks = [
   {
     label: 'Home',
-    href: '/',
+    href: '/dashboard',
     icon: Home,
   },
   {
     label: 'Perfil',
-    href: '/profile',
+    href: '/dashboard/profile',
     icon: User,
   },
   {
     label: 'Lista de Desafios',
-    href: '/about',
+    href: '/dashboard/challenges',
     icon: Swords,
   },
 ];
