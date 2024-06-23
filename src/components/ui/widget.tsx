@@ -5,9 +5,7 @@ interface WidgetProps {
 }
 
 const Widget = ({ children }: WidgetProps) => {
-  return (
-    <div className='max-w-[576px] rounded-xl bg-secondary'>{children}</div>
-  );
+  return <div className='w-[576px] rounded-xl bg-secondary'>{children}</div>;
 };
 
 export default Widget;
