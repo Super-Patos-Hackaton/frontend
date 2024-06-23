@@ -16,10 +16,14 @@
   },
   "dependencies": {
     "@formkit/tempo": "^0.1.1",
+    "@headlessui/react": "^2.1.0",
+    "@headlessui/tailwindcss": "^0.2.1",
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.6.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@remixicon/react": "^4.2.0",
     "@tanstack/react-query": "^5.40.1",
+    "@tremor/react": "^3.17.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
@@ -40,6 +44,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@tailwindcss/forms": "^0.5.7",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
