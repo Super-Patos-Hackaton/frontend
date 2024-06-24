@@ -1,8 +1,17 @@
-interface GraphProps {
-  percentage: number;
+import { Card, ProgressBar } from '@tremor/react';
+
+interface CircularProgressionProps {
+  nextLevelPercentage: number;
 }
 
-const CircularProgress = ({ percentage }: GraphProps) => {
+interface BarProgressionProps {
+  totalChallengePercentage: number;
+  barLabel: string;
+}
+
+const CircularProgress = ({
+  nextLevelPercentage,
+}: CircularProgressionProps) => {
   return (
     <div className='relative max-w-[268px] p-5'>
       <svg className='h-full w-full' viewBox='0 0 100 100'>
@@ -24,7 +33,7 @@ const CircularProgress = ({ percentage }: GraphProps) => {
           r='40'
           fill='transparent'
           strokeDasharray='251.2'
-          strokeDashoffset={`calc(251.2 - (251.2 * ${percentage}) / 100)`}
+          strokeDashoffset={`calc(251.2 - (251.2 * ${nextLevelPercentage}) / 100)`}
         ></circle>
 
         <text
@@ -34,11 +43,28 @@ const CircularProgress = ({ percentage }: GraphProps) => {
           textAnchor='middle'
           alignmentBaseline='middle'
         >
-          {percentage}%
+          {nextLevelPercentage}%
         </text>
       </svg>
     </div>
   );
 };
 
-export { CircularProgress };
+const BarProgress = ({
+  totalChallengePercentage,
+  barLabel,
+}: BarProgressionProps) => {
+  return (
+    <Card className='mx-auto p-0'>
+      <p className='text-bold mb-8 flex items-center justify-between text-2xl font-bold text-tremor-content dark:text-dark-tremor-content'>
+        {barLabel}
+      </p>
+      <ProgressBar
+        value={totalChallengePercentage}
+        className='color-red child:h-16!important mb-8 mt-3'
+      />
+    </Card>
+  );
+};
+
+export { CircularProgress, BarProgress };

@@ -26,7 +26,7 @@ export const NavLinksSidebar = () => {
             <Button
               className={cn(
                 'mb-1 h-11 w-full justify-start bg-transparent hover:bg-brand-400/15',
-                pathname.match(href) &&
+                pathname === href &&
                   'bg-brand-500/25 text-brand-100 hover:bg-brand-600/50 hover:text-brand-100'
               )}
               asChild

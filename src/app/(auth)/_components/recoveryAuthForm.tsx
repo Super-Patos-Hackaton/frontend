@@ -38,7 +38,7 @@ const RecoveryAuthForm = () => {
   return (
     <form
       data-testid='recovery-form'
-      className='m-auto flex w-1/3 flex-col gap-4'
+      className='m-auto flex w-1/3 flex-col gap-6'
       onSubmit={handleSubmit(onSubmit)}
     >
       <div>
@@ -50,7 +50,7 @@ const RecoveryAuthForm = () => {
         />
         <ErrorMessage
           as={Typography.Error}
-          className='text-red-400'
+          className='text-destructive'
           errors={errors}
           name='email'
         />
@@ -59,9 +59,9 @@ const RecoveryAuthForm = () => {
         type='submit'
         size='lg'
         data-testid='submit-button-test'
-        className='w-full rounded-lg text-lg uppercase'
+        className='w-full rounded-lg text-lg font-medium'
       >
-        Recuperar Senha
+        recuperar senha
       </Button>
     </form>
   );
