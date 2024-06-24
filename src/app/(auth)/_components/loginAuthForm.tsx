@@ -52,11 +52,13 @@ const LoginAuthForm = () => {
           data-testid='email-input-test'
           type='text'
           placeholder='Email'
+          className='text-brand-50'
           {...register('email')}
         />
         <ErrorMessage
           as={Typography.Error}
           errors={formState.errors}
+          className='text-destructive'
           name='email'
         />
       </div>
@@ -71,19 +73,22 @@ const LoginAuthForm = () => {
         <ErrorMessage
           as={Typography.Error}
           errors={formState.errors}
+          className='text-destructive'
           name='currentPassword'
         />
         <Link href='/recovery' data-testid='recovery-link-test'>
-          <Typography.Muted>Recuperar a senha</Typography.Muted>
+          <Typography.Muted className='ml-1 mt-1 text-brand-400 hover:text-brand-500'>
+            Recuperar senha
+          </Typography.Muted>
         </Link>
       </div>
       <Button
         type='submit'
         size='lg'
         data-testid='submit-button-test'
-        className='w-full rounded-lg text-lg uppercase'
+        className='w-full rounded-lg text-lg'
       >
-        Entrar
+        entrar
       </Button>
     </form>
   );
