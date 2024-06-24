@@ -24,7 +24,7 @@ const H2 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h2
       className={cn(
-        'scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0',
+        'scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0',
         className
       )}
     >
@@ -37,7 +37,7 @@ const H3 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h3
       className={cn(
-        'scroll-m-20 pb-2 text-2xl font-semibold tracking-tight first:mt-0',
+        'scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0',
         className
       )}
     >
@@ -50,7 +50,7 @@ const P = ({ children, className }: TypographyProps<HTMLParagraphElement>) => {
   return (
     <p
       className={cn(
-        'scroll-m-20 pb-2 text-base font-normal tracking-tight first:mt-0',
+        'scroll-m-20 text-base font-normal tracking-tight first:mt-0',
         className
       )}
     >
