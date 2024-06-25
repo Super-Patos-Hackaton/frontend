@@ -39,7 +39,7 @@ export default function FilterChallenge() {
           Pesquisar
         </Label>
         <Input
-          className='bg-searchIcon mt-1 rounded-md border-placeholder bg-[#3c3634] placeholder:text-brand-400'
+          className='bg-searchIcon mt-1 rounded-md border-placeholder bg-input placeholder:text-brand-400'
           placeholder='Pesquise por um desafio'
           id='search'
           type='text'
@@ -68,8 +68,8 @@ export default function FilterChallenge() {
           comboType='difficulty'
         />
       </div>
-      <Button className='mt-4 w-full bg-[#3c3634] font-medium text-brand-500 hover:bg-[#3c3634]/[0.8]'>
-        LIMPAR
+      <Button className='mt-4 w-full bg-input text-base font-medium uppercase text-brand-500 hover:bg-input/80'>
+        Limpar
       </Button>
     </form>
   );

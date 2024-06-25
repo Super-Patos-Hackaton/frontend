@@ -63,7 +63,7 @@ export function Combobox({ items, placeholder, comboType }: ComboboxProps) {
           variant='outline'
           role='combobox'
           aria-expanded={open}
-          className='w-full justify-between rounded-md border-placeholder bg-[#3c3634] text-brand-400 hover:bg-[#3c3634]/[0.8] hover:text-brand-400'
+          className='w-full justify-between rounded-md border-placeholder bg-input text-brand-400 hover:bg-input/80 hover:text-brand-400'
         >
           {value
             ? items.find((item) => item.value === value)?.label
