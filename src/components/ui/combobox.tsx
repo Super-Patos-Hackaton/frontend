@@ -1,6 +1,8 @@
 'use client';
 
-import * as React from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -25,11 +27,34 @@ export type Item = { label: string; value: string };
 interface ComboboxProps {
   placeholder: string;
   items: Item[];
+  comboType: string;
 }
 
-export function Combobox({ items, placeholder }: ComboboxProps) {
-  const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState('');
+export function Combobox({ items, placeholder, comboType }: ComboboxProps) {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState('');
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathName = usePathname();
+
+  const handleChangeParams = (currentValue: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set(comboType, currentValue);
+    router.replace(pathName + '?' + params);
+  };
+
+  useEffect(() => {
+    if (value) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(comboType, value);
+      router.replace(pathName + '?' + params);
+    } else {
+      const params = new URLSearchParams(searchParams.toString());
+      params.delete(comboType);
+      router.replace(pathName + '?' + params);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value]);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -38,7 +63,7 @@ export function Combobox({ items, placeholder }: ComboboxProps) {
           variant='outline'
           role='combobox'
           aria-expanded={open}
-          className='w-full justify-between bg-[#3c3634] text-brand-400 hover:bg-[#3c3634]/[0.8] hover:text-brand-400'
+          className='w-full justify-between rounded-md border-placeholder bg-[#3c3634] text-brand-400 hover:bg-[#3c3634]/[0.8] hover:text-brand-400'
         >
           {value
             ? items.find((item) => item.value === value)?.label
@@ -61,6 +86,7 @@ export function Combobox({ items, placeholder }: ComboboxProps) {
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? '' : currentValue);
                     setOpen(false);
+                    handleChangeParams(currentValue);
                   }}
                 >
                   {item.label}

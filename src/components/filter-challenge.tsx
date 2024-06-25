@@ -1,32 +1,36 @@
 'use client';
 
-import { Search } from 'lucide-react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-import logo from '../../public/img/white-logo.png';
+import { difficulty, sort, stacks } from '@/config/mocks/filter-challenge';
+
+import { useDebounceValue } from 'usehooks-ts';
+
 import { Button } from './ui/button';
-import { Combobox, Item } from './ui/combobox';
+import { Combobox } from './ui/combobox';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 
 export default function FilterChallenge() {
-  // valores placeholder até vir algo do back
-  const ordens: Item[] = [
-    { label: 'Mais recente', value: 'maisRecente' },
-    { label: 'Mais antigo', value: 'maisAntigo' },
-  ];
-  const tecnologias: Item[] = [
-    { label: 'Javascript', value: 'javascript' },
-    { label: 'Typescript', value: 'Typescript' },
-    { label: 'Figma', value: 'figma' },
-    { label: 'Java', value: 'java' },
-  ];
+  const router = useRouter();
+  const pathName = usePathname();
+  const searchParams = useSearchParams();
+  const [inputValue, setInputValue] = useState('');
+  const [debouncedValue] = useDebounceValue(inputValue, 500);
 
-  const dificuldades: Item[] = [
-    { label: 'Fácil', value: 'facil' },
-    { label: 'Difícil', value: 'dificil' },
-    { label: 'Avançado', value: 'avancado' },
-    { label: 'Expert', value: 'expert' },
-  ];
+  useEffect(() => {
+    if (debouncedValue) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set('search', debouncedValue.toString());
+      router.replace(pathName + '?' + params);
+    } else {
+      const params = new URLSearchParams(searchParams.toString());
+      params.delete('search');
+      router.replace(pathName + '?' + params);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedValue]);
 
   return (
     <form className='flex w-80 flex-col gap-4 rounded-md bg-secondary p-4'>
@@ -35,25 +39,36 @@ export default function FilterChallenge() {
           Pesquisar
         </Label>
         <Input
-          className='bg-searchIcon mt-1 bg-[#3c3634] placeholder:text-brand-400'
+          className='bg-searchIcon mt-1 rounded-md border-placeholder bg-[#3c3634] placeholder:text-brand-400'
           placeholder='Pesquise por um desafio'
           id='search'
           type='text'
+          onChange={(e) => {
+            setInputValue(e.target.value);
+          }}
         />
       </div>
       <div>
         <Label className='text-lg text-brand-500'>Ordenar por</Label>
-        <Combobox items={ordens} placeholder='Ordenar por' />
+        <Combobox items={sort} placeholder='Ordenar por' comboType='order' />
       </div>
       <div>
         <Label className='text-lg text-brand-500'>Tecnologias</Label>
-        <Combobox items={tecnologias} placeholder='Tecnologia' />
+        <Combobox
+          items={stacks}
+          placeholder='Tecnologia'
+          comboType='technology'
+        />
       </div>
       <div>
         <Label className='text-lg text-brand-500'>Dificuldade</Label>
-        <Combobox items={dificuldades} placeholder='Dificuldade' />
+        <Combobox
+          items={difficulty}
+          placeholder='Dificuldade'
+          comboType='difficulty'
+        />
       </div>
-      <Button className='w-full bg-[#3c3634] font-medium text-brand-500 hover:bg-[#3c3634]/[0.8]'>
+      <Button className='mt-4 w-full bg-[#3c3634] font-medium text-brand-500 hover:bg-[#3c3634]/[0.8]'>
         LIMPAR
       </Button>
     </form>
