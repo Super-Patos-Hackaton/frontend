@@ -1,15 +1,12 @@
 import Link from 'next/link';
 
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Typography } from '@/components/ui/typography';
 
 import { tags } from '@/config/mocks/individual-challenges';
 
 import { cn } from '@/lib/utils';
 
-import { SendHorizonal, Sword, Tag, Truck } from 'lucide-react';
+import { Sword, Tag, Truck } from 'lucide-react';
 
 import { CardSubtitle } from './_components/card-subtitle';
 import { SubmitChallengeForm } from './_components/submit-challenge-form';
