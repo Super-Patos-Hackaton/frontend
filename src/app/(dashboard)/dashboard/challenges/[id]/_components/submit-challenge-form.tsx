@@ -41,7 +41,7 @@ type SubmitChallengeFormSchema = z.infer<typeof submitChallengeFormSchema>;
 export const SubmitChallengeForm = () => {
   const { toast } = useToast();
 
-  const { register, formState, handleSubmit, getFieldState, getValues, watch } =
+  const { register, formState, handleSubmit, watch } =
     useForm<SubmitChallengeFormSchema>({
       resolver: zodResolver(submitChallengeFormSchema),
       mode: 'onBlur',
