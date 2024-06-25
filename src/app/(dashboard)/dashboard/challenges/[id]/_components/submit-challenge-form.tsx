@@ -63,6 +63,7 @@ export const SubmitChallengeForm = () => {
       <div className='relative mb-5 mt-2 h-full'>
         <Textarea
           placeholder='(opcional)'
+          data-testid='submit-challenge-comment'
           className='h-full resize-none text-brand-50 placeholder:text-base'
           {...register('comment')}
         />
@@ -90,6 +91,7 @@ export const SubmitChallengeForm = () => {
       <div className='mt-2 flex items-center gap-2'>
         <div className='relative flex w-full flex-col items-center gap-1'>
           <Input
+            data-testid='submit-challenge-link'
             className={cn(
               'h-12 text-base placeholder:text-base',
               formState.errors.link &&
@@ -109,6 +111,7 @@ export const SubmitChallengeForm = () => {
 
         <Button
           type='submit'
+          data-testid='submit-challenge-button'
           disabled={!watchLink.length || !formState.isValid}
           className={cn(
             'h-12 w-fit rounded-lg p-2.5',
