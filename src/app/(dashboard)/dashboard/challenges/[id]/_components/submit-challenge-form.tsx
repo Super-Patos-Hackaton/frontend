@@ -112,7 +112,7 @@ export const SubmitChallengeForm = () => {
         <Button
           type='submit'
           data-testid='submit-challenge-button'
-          disabled={!watchLink.length || !formState.isValid}
+          disabled={!formState.isValid}
           className={cn(
             'h-12 w-fit rounded-lg p-2.5',
             formState.errors.link && 'self-start'
