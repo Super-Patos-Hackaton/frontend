@@ -105,25 +105,12 @@ export const IndividualChallengePage = ({
           </Typography.H2>
         </span>
 
-        <div className='flex h-full flex-col justify-between rounded-md bg-secondary px-6 pb-6 pt-4'>
+        <div className='flex h-full flex-col rounded-md bg-secondary px-6 pb-6 pt-4'>
           <CardSubtitle>Sobre a entrega</CardSubtitle>
 
           <Typography.P className='mt-4'>
             Você tem algo a comentar sobre a sua solução? Pontos positivos ou
             negativos que possam ser melhorados?
-          </Typography.P>
-
-          <Textarea
-            placeholder='(opcional)'
-            className='mb-5 mt-2 h-full resize-none text-brand-50 placeholder:text-base'
-          />
-
-          <CardSubtitle className='mt-auto'>Envio do link</CardSubtitle>
-
-          <Typography.P className='mt-4'>
-            Insira o link para o repositório github abaixo para realizar a
-            entrega, lembre-se de deixar o repositório público para que possam
-            ser acessado pelo gestor de desafios
           </Typography.P>
 
           <SubmitChallengeForm />
