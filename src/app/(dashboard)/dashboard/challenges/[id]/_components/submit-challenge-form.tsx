@@ -56,7 +56,6 @@ export const SubmitChallengeForm = () => {
   };
 
   const watchTextarea = watch('comment');
-  const watchLink = watch('link');
 
   return (
     <form className='flex h-full flex-col' onSubmit={handleSubmit(onSubmit)}>
