@@ -28,7 +28,7 @@ type SubmitChallengeFormSchema = z.infer<typeof submitChallengeFormSchema>;
 export const SubmitChallengeForm = () => {
   const { toast } = useToast();
 
-  const { register, formState, handleSubmit } =
+  const { register, formState, handleSubmit, getFieldState, getValues, watch } =
     useForm<SubmitChallengeFormSchema>({
       resolver: zodResolver(submitChallengeFormSchema),
       mode: 'onBlur',
@@ -41,6 +41,7 @@ export const SubmitChallengeForm = () => {
       description: 'Aguarde um pouco para que ele seja aprovado',
     });
   };
+
   return (
     <form
       className='mt-3 flex items-center gap-2'
@@ -67,6 +68,7 @@ export const SubmitChallengeForm = () => {
 
       <Button
         type='submit'
+        disabled={!watch('link')}
         className={cn(
           'h-12 w-fit rounded-lg p-2.5',
           formState.errors.link && 'self-start'
