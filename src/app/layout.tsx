@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/ui/toaster';
 
 import { cn } from '@/lib/utils';
 
@@ -22,6 +23,7 @@ const RootLayout = ({
       <body className={cn(fontSans, fontMono, fontAcme)}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
