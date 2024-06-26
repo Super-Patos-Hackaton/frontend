@@ -4,7 +4,7 @@ import UserLevel from '@/components/user-level';
 
 const Home = () => {
   return (
-    <main className='mx-auto mt-[-48px] flex h-full max-w-7xl flex-col justify-center px-6'>
+    <main className='mx-auto flex h-full max-w-7xl flex-col justify-center px-6 pb-12'>
       <div className='flex h-[633px] justify-center gap-12'>
         <div className='w-2/3'>
           <ChallengesCompletion
