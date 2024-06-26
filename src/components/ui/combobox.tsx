@@ -23,7 +23,7 @@ import { cn } from '@/lib/utils';
 
 import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons';
 
-export type Item = { label: string; value: string; comboBoxCleaner: number };
+export type Item = { label: string; value: string; comboBoxCleaner: boolean };
 interface ComboboxProps {
   placeholder: string;
   items: Item[];

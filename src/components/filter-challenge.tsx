@@ -27,7 +27,6 @@ export default function FilterChallenge() {
     params.delete('search');
     router.replace(pathName);
     setInputValue('');
-    // params.get('search')
   };
 
   const ComboBoxClean = () => {
