@@ -1,20 +1,20 @@
 import { Item } from '@/components/ui/combobox';
 
 export const sort: Item[] = [
-  { label: 'Mais recente', value: 'maisRecente', comboBoxCleaner: false },
-  { label: 'Mais antigo', value: 'maisAntigo', comboBoxCleaner: false },
+  { label: 'Mais recente', value: 'maisRecente' },
+  { label: 'Mais antigo', value: 'maisAntigo' },
 ];
 
 export const stacks: Item[] = [
-  { label: 'JavaScript', value: 'javascript', comboBoxCleaner: false },
-  { label: 'TypeScript', value: 'typescript', comboBoxCleaner: false },
-  { label: 'Figma', value: 'figma', comboBoxCleaner: false },
-  { label: 'Java', value: 'java', comboBoxCleaner: false },
+  { label: 'JavaScript', value: 'javascript' },
+  { label: 'TypeScript', value: 'typescript' },
+  { label: 'Figma', value: 'figma' },
+  { label: 'Java', value: 'java' },
 ];
 
 export const difficulty: Item[] = [
-  { label: 'Fácil', value: 'facil', comboBoxCleaner: false },
-  { label: 'Difícil', value: 'dificil', comboBoxCleaner: false },
-  { label: 'Avançado', value: 'avancado', comboBoxCleaner: false },
-  { label: 'Expert', value: 'expert', comboBoxCleaner: false },
+  { label: 'Fácil', value: 'facil' },
+  { label: 'Difícil', value: 'dificil' },
+  { label: 'Avançado', value: 'avancado' },
+  { label: 'Expert', value: 'expert' },
 ];
