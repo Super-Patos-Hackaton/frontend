@@ -23,17 +23,27 @@ import { cn } from '@/lib/utils';
 
 import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons';
 
-export type Item = { label: string; value: string };
+export type Item = { label: string; value: string; comboBoxCleaner: number };
 interface ComboboxProps {
   placeholder: string;
   items: Item[];
   comboType: string;
+  comboBoxCleaner: boolean;
+  clearComboBoxClean: () => void;
 }
 
-export function Combobox({ items, placeholder, comboType }: ComboboxProps) {
+export function Combobox({
+  items,
+  placeholder,
+  comboType,
+  comboBoxCleaner,
+  clearComboBoxClean,
+}: ComboboxProps) {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState('');
   const searchParams = useSearchParams();
+  const params = new URLSearchParams(searchParams.toString());
+  const [value, setValue] = useState(params.get(comboType) ?? '');
+
   const router = useRouter();
   const pathName = usePathname();
 
@@ -44,17 +54,22 @@ export function Combobox({ items, placeholder, comboType }: ComboboxProps) {
   };
 
   useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString());
+
     if (value) {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set(comboType, value);
+      if (comboBoxCleaner) {
+        params.set(comboType, value);
+        router.replace(pathName + '?' + params);
+      }
+    }
+
+    if (comboBoxCleaner) {
+      params.get(comboType) && setValue('');
       router.replace(pathName + '?' + params);
-    } else {
-      const params = new URLSearchParams(searchParams.toString());
-      params.delete(comboType);
-      router.replace(pathName + '?' + params);
+      clearComboBoxClean();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value]);
+  }, [value, comboBoxCleaner]);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>

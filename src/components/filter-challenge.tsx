@@ -16,8 +16,27 @@ export default function FilterChallenge() {
   const router = useRouter();
   const pathName = usePathname();
   const searchParams = useSearchParams();
-  const [inputValue, setInputValue] = useState('');
+  const params = new URLSearchParams(searchParams.toString());
+  const [inputValue, setInputValue] = useState(params.get('search') ?? '');
   const [debouncedValue] = useDebounceValue(inputValue, 500);
+  const [comboBoxCleaner, setComboBoxCleaner] = useState(false);
+
+  const HandleClean = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete('search');
+    router.replace(pathName);
+    setInputValue('');
+    // params.get('search')
+  };
+
+  const ComboBoxClean = () => {
+    setComboBoxCleaner(true);
+  };
+
+  const clearComboBoxClean = () => {
+    setComboBoxCleaner(false);
+  };
 
   useEffect(() => {
     if (debouncedValue) {
@@ -33,7 +52,10 @@ export default function FilterChallenge() {
   }, [debouncedValue]);
 
   return (
-    <form className='flex w-80 flex-col gap-4 rounded-md bg-secondary p-4'>
+    <form
+      onSubmit={HandleClean}
+      className='flex w-80 flex-col gap-4 rounded-md bg-secondary p-4'
+    >
       <div>
         <Label htmlFor='search' className={'text-lg text-brand-500'}>
           Pesquisar
@@ -46,11 +68,18 @@ export default function FilterChallenge() {
           onChange={(e) => {
             setInputValue(e.target.value);
           }}
+          value={inputValue}
         />
       </div>
       <div>
         <Label className='text-lg text-brand-500'>Ordenar por</Label>
-        <Combobox items={sort} placeholder='Ordenar por' comboType='order' />
+        <Combobox
+          items={sort}
+          placeholder='Ordenar por'
+          comboType='order'
+          comboBoxCleaner={comboBoxCleaner}
+          clearComboBoxClean={clearComboBoxClean}
+        />
       </div>
       <div>
         <Label className='text-lg text-brand-500'>Tecnologias</Label>
@@ -58,6 +87,8 @@ export default function FilterChallenge() {
           items={stacks}
           placeholder='Tecnologia'
           comboType='technology'
+          comboBoxCleaner={comboBoxCleaner}
+          clearComboBoxClean={clearComboBoxClean}
         />
       </div>
       <div>
@@ -66,9 +97,14 @@ export default function FilterChallenge() {
           items={difficulty}
           placeholder='Dificuldade'
           comboType='difficulty'
+          comboBoxCleaner={comboBoxCleaner}
+          clearComboBoxClean={clearComboBoxClean}
         />
       </div>
-      <Button className='mt-4 w-full bg-input text-base font-medium uppercase text-brand-500 hover:bg-input/80'>
+      <Button
+        onClick={() => ComboBoxClean()}
+        className='mt-4 w-full bg-input text-base font-medium uppercase text-brand-500 hover:bg-input/80'
+      >
         Limpar
       </Button>
     </form>
