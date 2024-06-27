@@ -3,3 +3,9 @@ export interface ChallengeDeadline {
   title: string;
   deadline: Date;
 }
+
+export type ChallengeLevel =
+  | 'beginner'
+  | 'intermediate'
+  | 'advanced'
+  | 'expert';

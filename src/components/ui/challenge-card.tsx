@@ -2,9 +2,14 @@ import Image from 'next/image';
 
 import { Badge } from '@/components/ui/badge';
 
+import { challengeLevels } from '@/config/mocks/challenge-card';
+
 import { cn } from '@/lib/utils';
 
-import { format } from '@formkit/tempo';
+import { ChallengeLevel } from '@/types/challenges';
+
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 import { Typography } from './typography';
 
@@ -23,18 +28,11 @@ interface ChallengeEventCardRefProps {
 interface ChallengeCardProps {
   title: string;
   techs: string[];
-  challengeLevel: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+  challengeLevel: ChallengeLevel;
   description: string;
 }
 
 type ChallengeEventCard = ChallengeEventCardProps | ChallengeEventCardRefProps;
-
-const challengeLevels = {
-  beginner: 'Iniciante',
-  intermediate: 'Intermediário',
-  advanced: 'Avançado',
-  expert: 'Expert',
-};
 
 export const ChallengeCard = ({
   title,
@@ -46,7 +44,7 @@ export const ChallengeCard = ({
   isAnEvent,
 }: ChallengeCardProps & ChallengeEventCard) => {
   return (
-    <div className='grid max-h-52 w-fit max-w-[500px] grid-cols-9 overflow-hidden rounded-2xl'>
+    <div className='grid max-h-52 w-fit max-w-[900px] grid-cols-9 overflow-hidden rounded-2xl'>
       <div className='relative col-span-4 overflow-hidden'>
         <Badge
           className={cn(
@@ -75,7 +73,13 @@ export const ChallengeCard = ({
 
         {isAnEvent && (
           <Typography.Muted className='absolute bottom-6 left-1/2 z-10 w-fit -translate-x-1/2 text-nowrap text-xs'>
-            {`${format(eventStartDate, 'short', 'br')} - ${format(eventEndDate, 'short', 'br')}`}
+            {`${format(eventStartDate, 'dd MMMM yyyy', { locale: ptBR })} - ${format(
+              eventEndDate,
+              'dd MMMM yyyy',
+              {
+                locale: ptBR,
+              }
+            )}`}
           </Typography.Muted>
         )}
       </div>

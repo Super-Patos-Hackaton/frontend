@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@formkit/tempo':
-        specifier: ^0.1.1
-        version: 0.1.1
       '@headlessui/react':
         specifier: ^2.1.0
         version: 2.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -905,11 +902,8 @@ packages:
   '@floating-ui/utils@0.2.3':
     resolution: {integrity: sha512-XGndio0l5/Gvd6CLIABvsav9HHezgDFFhDfHk1bvLfr9ni8dojqLSvBbotJEjmIwNHL7vK4QzBJTdBRoB+c1ww==}
 
-  /@formkit/tempo@0.1.1:
-    resolution: {integrity: sha512-nepRwKnCIjukLkblqh339sSXYI6P3cqktF/T7ECj3vURW+Pd+YzTv/I/lwjRqPGmlQJG93LORodIAkvgoExIAg==}
-    dev: false
 
-  /@headlessui/react@1.7.19(react-dom@18.3.0)(react@18.3.1):
+  '@headlessui/react@1.7.19':
     resolution: {integrity: sha512-Ll+8q3OlMJfJbAKM/+/Y2q6PPYbryqNTXDbryx7SXLIDamkF6iQFbriYHga0dY44PvDhvvBWCx1Xj4U5+G4hOw==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -6958,8 +6952,6 @@ snapshots:
       tabbable: 6.2.0
 
   '@floating-ui/utils@0.2.3': {}
-
-  '@formkit/tempo@0.1.1': {}
 
   '@headlessui/react@1.7.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
