@@ -5,9 +5,11 @@ import { Button } from '@/components/ui/button';
 import { ChallengeCard } from '@/components/ui/challenge-card';
 import { Typography } from '@/components/ui/typography';
 
-import { ChallengeLevel, challenges } from '@/config/mocks/challenge-card';
+import { challenges } from '@/config/mocks/challenge-card';
 
 import { cn } from '@/lib/utils';
+
+import { ChallengeLevel } from '@/types/challenges';
 
 import { Rocket, Sword, Tag } from 'lucide-react';
 

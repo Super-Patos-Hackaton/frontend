@@ -2,9 +2,11 @@ import Image from 'next/image';
 
 import { Badge } from '@/components/ui/badge';
 
-import { ChallengeLevel, challengeLevels } from '@/config/mocks/challenge-card';
+import { challengeLevels } from '@/config/mocks/challenge-card';
 
 import { cn } from '@/lib/utils';
+
+import { ChallengeLevel } from '@/types/challenges';
 
 import { format } from '@formkit/tempo';
 
