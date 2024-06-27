@@ -8,7 +8,8 @@ import { cn } from '@/lib/utils';
 
 import { ChallengeLevel } from '@/types/challenges';
 
-import { format } from '@formkit/tempo';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 import { Typography } from './typography';
 
@@ -72,7 +73,13 @@ export const ChallengeCard = ({
 
         {isAnEvent && (
           <Typography.Muted className='absolute bottom-6 left-1/2 z-10 w-fit -translate-x-1/2 text-nowrap text-xs'>
-            {`${format(eventStartDate, 'short', 'br')} - ${format(eventEndDate, 'short', 'br')}`}
+            {`${format(eventStartDate, 'dd MMMM yyyy', { locale: ptBR })} - ${format(
+              eventEndDate,
+              'dd MMMM yyyy',
+              {
+                locale: ptBR,
+              }
+            )}`}
           </Typography.Muted>
         )}
       </div>
