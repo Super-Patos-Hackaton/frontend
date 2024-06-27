@@ -39,13 +39,11 @@ const ChallengesPage = () => {
         return matchDifficulty && matchStacks && matchSearch;
       });
 
-      if (sort) {
-        if (sort === 'desc') {
-          return filter.sort((a, b) => b.id - a.id);
-        }
-
-        return filter.sort((a, b) => a.id - b.id);
+      if (sort === 'desc') {
+        return filter.sort((a, b) => b.id - a.id);
       }
+
+      return filter.sort((a, b) => a.id - b.id);
     }
 
     return challenges;
@@ -116,35 +114,6 @@ const ChallengesPage = () => {
                       />
                     </Link>
                   ))}
-            {/* {challengesFilter.length >= 0 ? (
-              challengesFilter.map((challenge) => (
-                <Link
-                  key={challenge.id}
-                  href={`/dashboard/challenges/${challenge.id}`}
-                >
-                  {challengeType === 'perm' ? (
-                    <ChallengeCard
-                      title={challenge.title}
-                      techs={challenge.techs}
-                      challengeLevel={challenge.challengeLevel}
-                      description={challenge.description}
-                    />
-                  ) : (
-                    <ChallengeCard
-                      title={challenge.title}
-                      techs={challenge.techs}
-                      challengeLevel={challenge.challengeLevel}
-                      description={challenge.description}
-                      eventStartDate={challenge.eventStartDate}
-                      eventEndDate={challenge.eventEndDate}
-                      isAnEvent
-                    />
-                  )}
-                </Link>
-              ))
-            ) : (
-              <Typography.Error>Nenhum desafio encontrado</Typography.Error>
-            )} */}
           </div>
         </div>
       </div>
