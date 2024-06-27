@@ -121,7 +121,7 @@ const AcceptanceChallengePage = ({ params }: AcceptanceChallengePageProps) => {
           <Rocket className='size-7' />
 
           <Typography.H2 className='text-2xl font-medium'>
-            Continue se desafiando
+            Continue se Desafiando
           </Typography.H2>
         </span>
 
