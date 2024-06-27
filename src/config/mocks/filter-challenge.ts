@@ -1,8 +1,8 @@
 import { Item } from '@/components/ui/combobox';
 
 export const sort: Item[] = [
-  { label: 'Mais recente', value: 'maisRecente' },
-  { label: 'Mais antigo', value: 'maisAntigo' },
+  { label: 'Mais recente', value: 'asc' },
+  { label: 'Mais antigo', value: 'desc' },
 ];
 
 export const stacks: Item[] = [
@@ -13,8 +13,8 @@ export const stacks: Item[] = [
 ];
 
 export const difficulty: Item[] = [
-  { label: 'Fácil', value: 'facil' },
-  { label: 'Difícil', value: 'dificil' },
-  { label: 'Avançado', value: 'avancado' },
+  { label: 'Iniciante', value: 'beginner' },
+  { label: 'Intermediário', value: 'intermediate' },
+  { label: 'Avançado', value: 'advanced' },
   { label: 'Expert', value: 'expert' },
 ];
