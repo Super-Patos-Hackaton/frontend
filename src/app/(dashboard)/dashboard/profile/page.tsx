@@ -22,8 +22,16 @@ export const ProfilePage = () => {
         <div className='flex h-full flex-col items-start'>
           <div className='relative mb-4'>
             <Avatar className='size-[15.5rem] overflow-hidden'>
-              <AvatarImage src={user.avatar} width={248} height={248} />
-              <AvatarFallback className='flex items-center bg-brand-300'>
+              <AvatarImage
+                src={user.avatar}
+                width={248}
+                height={248}
+                data-testid='profile-image'
+              />
+              <AvatarFallback
+                className='flex items-center bg-brand-300'
+                data-testid='profile-image-fallback'
+              >
                 <UserIcon className='size-full rounded-full fill-brand-50 text-brand-50' />
 
                 <div className='absolute -bottom-40 size-48 bg-brand-50' />
@@ -33,6 +41,7 @@ export const ProfilePage = () => {
             <Button
               size='icon'
               className='absolute bottom-4 right-4 z-10 rounded-full bg-brand-500 p-2'
+              data-testid='edit-profile-image-button'
             >
               <PencilIcon className='size-6' />
             </Button>
@@ -56,7 +65,10 @@ export const ProfilePage = () => {
             })}
           </div>
 
-          <Button className='mt-5 w-full uppercase tracking-normal'>
+          <Button
+            className='mt-5 w-full uppercase tracking-normal'
+            data-testid='edit-profile-button'
+          >
             Editar
           </Button>
 
@@ -94,12 +106,12 @@ export const ProfilePage = () => {
         </ProfileCard>
 
         <ProfileCard title='Informações'>
-          <div className='flex w-full justify-between gap-8'>
+          <div className='mt-3 flex w-full justify-between gap-8'>
             <UserScoreChart />
 
             <MostUsedTechsChart />
           </div>
-          <Typography.H2 className='mt-6 text-brand-500'>
+          <Typography.H2 className='mb-3 mt-6 text-brand-500'>
             Ferramentas
           </Typography.H2>
 

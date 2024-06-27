@@ -31,7 +31,7 @@ export const NavLinksSidebar = () => {
               )}
               asChild
             >
-              <Link href={href}>
+              <Link href={href} data-testid={`nav-link-${label}`}>
                 <span className={cn(!sidebar?.isOpen ? '' : 'mr-4')}>
                   <Icon size={20} />
                 </span>

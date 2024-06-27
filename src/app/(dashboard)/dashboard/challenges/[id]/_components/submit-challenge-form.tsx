@@ -58,7 +58,11 @@ export const SubmitChallengeForm = () => {
   const watchTextarea = watch('comment');
 
   return (
-    <form className='flex h-full flex-col' onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className='flex h-full flex-col'
+      onSubmit={handleSubmit(onSubmit)}
+      data-testid='submit-challenge-form'
+    >
       <div className='relative mb-5 mt-2 h-full'>
         <Textarea
           placeholder='(opcional)'
