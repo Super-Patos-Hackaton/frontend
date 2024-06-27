@@ -1,8 +1,4 @@
-export type ChallengeLevel =
-  | 'beginner'
-  | 'intermediate'
-  | 'advanced'
-  | 'expert';
+import { ChallengeLevel } from '@/types/challenges';
 
 export const challengeLevels = {
   beginner: 'Iniciante',
