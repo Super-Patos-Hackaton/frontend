@@ -7,8 +7,7 @@ import { IconTechs } from '@/config/icon-techs';
 import { user } from '@/config/mocks/user-profile-page';
 import { UserBadges } from '@/config/user-badges';
 
-import { format } from '@formkit/tempo';
-
+import { format } from 'date-fns';
 import { PencilIcon, UserIcon } from 'lucide-react';
 
 import { MostUsedTechsChart } from './_components/most-used-techs-chart';
@@ -78,7 +77,7 @@ export const ProfilePage = () => {
             </strong>
 
             <span className='text-brand-300'>
-              {format(user.createdAt, 'long', 'pt')}
+              {format(new Date(user.createdAt), 'P')}
             </span>
           </div>
 
