@@ -2,9 +2,11 @@ import { ReactNode } from 'react';
 
 import { cn } from '@/lib/utils';
 
+// eslint-disable-next-line no-unused-vars
 interface TypographyProps<_> {
   children: ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 const H1 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
@@ -33,13 +35,18 @@ const H2 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
   );
 };
 
-const H3 = ({ children, className }: TypographyProps<HTMLHeadingElement>) => {
+const H3 = ({
+  children,
+  className,
+  onClick,
+}: TypographyProps<HTMLHeadingElement>) => {
   return (
     <h3
       className={cn(
         'scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0',
         className
       )}
+      onClick={onClick}
     >
       {children}
     </h3>
