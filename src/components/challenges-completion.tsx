@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Button } from './ui/button';
 import { BarProgress } from './ui/graphElements';
@@ -10,14 +10,16 @@ import Widget from './ui/widget';
 interface ChallengesCompletionProps {
   totalChallengePercentage: number;
   nextChallengeDate: string;
+  classname?: string;
 }
 
 const ChallengesCompletion = ({
   totalChallengePercentage,
   nextChallengeDate,
+  classname,
 }: ChallengesCompletionProps) => {
   return (
-    <Widget>
+    <Widget className={classname}>
       <div className='content-around px-6 py-12'>
         <div className=''>
           <div className='mb-6 grid grid-cols-3 border-b border-brand-400'>

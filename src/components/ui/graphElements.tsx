@@ -37,9 +37,9 @@ const CircularProgress = ({
         ></circle>
 
         <text
-          className='flex content-center items-center fill-foreground text-lg font-semibold'
+          className='flex content-center items-center fill-foreground text-xl font-semibold'
           x='50'
-          y='50'
+          y='57'
           textAnchor='middle'
           alignmentBaseline='middle'
         >

@@ -52,7 +52,7 @@ const ChallengesCalendar = ({ className }: ChallengesCalendarProps) => {
 
   return (
     <div className={cn('h-full w-80', className)}>
-      <div className='flex h-[40%] flex-col justify-between rounded-t-lg bg-brand-500 px-6 py-3'>
+      <div className='flex h-[313px] flex-col justify-between rounded-t-lg bg-brand-500 px-6 py-3'>
         <Typography.P className='text-xs uppercase text-secondary'>
           Entrega de desafios
         </Typography.P>
@@ -71,7 +71,7 @@ const ChallengesCalendar = ({ className }: ChallengesCalendarProps) => {
           {`${capitalize(formatDate[0])}, ${formatDate[1]} ${capitalize(formatDate[2])}`}
         </Typography.H2>
       </div>
-      <div className='flex h-[60%] flex-col gap-4 rounded-b-lg bg-secondary px-3 pb-4 pt-5'>
+      <div className='flex h-80 flex-col gap-4 rounded-b-lg bg-secondary px-3 pb-4 pt-5'>
         <Calendar />
       </div>
     </div>
