@@ -80,7 +80,7 @@ const ChallengesPage = () => {
         </div>
         <div>
           <div className='grid max-h-[calc(100vh-7rem)] grid-cols-1 gap-3 overflow-y-scroll xl:grid-cols-2'>
-            {challengeType === 'perm'
+            {challengesFilter.length > 0 && challengeType === 'perm'
               ? challengesFilter
                   .filter((challenge) => !challenge.isAnEvent)
                   .map((challenge) => (
@@ -114,6 +114,9 @@ const ChallengesPage = () => {
                       />
                     </Link>
                   ))}
+            {challengesFilter.length <= 0 && (
+              <Typography.Error>Nenhum desafio encontrado</Typography.Error>
+            )}
           </div>
         </div>
       </div>
