@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -5,6 +7,8 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Typography } from '@/components/ui/typography';
+
+import { useLoginMutation } from '@/hooks/queries/LoginQueries';
 
 import { ErrorMessage } from '@hookform/error-message';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -32,20 +36,34 @@ type LoginFormSchema = z.infer<typeof loginFormSchema>;
 const LoginAuthForm = () => {
   const router = useRouter();
 
-  const { register, formState, handleSubmit } = useForm<LoginFormSchema>({
-    resolver: zodResolver(loginFormSchema),
-    mode: 'onChange',
-  });
+  const { register, formState, handleSubmit, getValues } =
+    useForm<LoginFormSchema>({
+      resolver: zodResolver(loginFormSchema),
+      mode: 'onChange',
+    });
+
+  // eslint-disable-next-line no-unused-vars
+  const onSuccess = (response: Response) => {
+    router.push('/');
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  const onError = (error: Error) => {};
+
+  const { mutate } = useLoginMutation(onSuccess, onError);
 
   const onSubmit: SubmitHandler<LoginFormSchema> = () => {
-    router.push('/');
+    mutate({
+      email: getValues('email'),
+      password: getValues('currentPassword'),
+    });
   };
 
   return (
     <form
       data-testid='login-form'
       className='m-auto flex w-1/3 flex-col gap-4'
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(() => onSubmit)}
     >
       <div>
         <Input
