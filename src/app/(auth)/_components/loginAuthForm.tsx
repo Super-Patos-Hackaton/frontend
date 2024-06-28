@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Typography } from '@/components/ui/typography';
 
-import { useLoginMutation } from '@/hooks/queries/LoginQueries';
+import { useLoginMutation } from '@/hooks/queries/UsersQueries';
 
 import { ErrorMessage } from '@hookform/error-message';
 import { zodResolver } from '@hookform/resolvers/zod';
