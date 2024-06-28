@@ -10,6 +10,7 @@ const loadingSpinnerVariants = cva('size-10 animate-spin text-brand-500', {
       md: 'size-6',
       lg: 'size-8',
       xl: 'size-10',
+      xxl: 'size-40',
     },
   },
 });
