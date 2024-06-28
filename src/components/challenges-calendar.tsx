@@ -43,7 +43,10 @@ const ChallengesCalendar = ({ className }: ChallengesCalendarProps) => {
       )
       .map((challenge) => (
         <li className='text-xs text-brand-500' key={challenge.title}>
-          <Link href={`/challenge/${challenge.id}`}>
+          <Link
+            href={`/challenge/${challenge.id}`}
+            data-testid={`challenge-link-${challenge.id}`}
+          >
             {limitTitle(challenge.title)}
           </Link>
         </li>

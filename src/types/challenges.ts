@@ -11,3 +11,4 @@ export type ChallengeLevel =
   | 'expert';
 
 export type ChallengeTypes = 'perm' | 'event';
+

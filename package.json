@@ -15,7 +15,6 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@formkit/tempo": "^0.1.1",
     "@headlessui/react": "^2.1.0",
     "@headlessui/tailwindcss": "^0.2.1",
     "@hookform/error-message": "^2.0.1",

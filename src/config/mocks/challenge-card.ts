@@ -4,6 +4,7 @@ export type ChallengeLevel =
   | 'advanced'
   | 'expert';
 
+
 export const challengeLevels = {
   beginner: 'Iniciante',
   intermediate: 'Intermediário',
@@ -14,6 +15,7 @@ export const challengeLevels = {
 const startDate = new Date(2024, 11, 16);
 
 const endDate = new Date(2024, 11, 20);
+
 
 export const challenges = [
   {

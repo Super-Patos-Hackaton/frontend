@@ -38,6 +38,7 @@ export const Sidebar = ({ navLinks }: { navLinks: React.ReactNode }) => {
               width={30}
               height={30}
               alt='Desafios do Pato - Logo'
+              data-testid='logo'
             />
 
             <Typography.H1 className='min-w-40 font-heading !text-base tracking-wide text-brand-100'>

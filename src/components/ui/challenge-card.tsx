@@ -69,6 +69,7 @@ export const ChallengeCard = ({
           style={{
             maskImage: `linear-gradient(to top, transparent, black 90%, black)`,
           }}
+          data-test-id='challenge-card-image'
         />
 
         {isAnEvent && (

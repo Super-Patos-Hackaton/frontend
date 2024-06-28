@@ -68,6 +68,7 @@ const FilterChallenge = () => {
             setInputValue(e.target.value);
           }}
           value={inputValue}
+          data-testid='search-challenge'
         />
       </div>
       <div>
@@ -103,6 +104,7 @@ const FilterChallenge = () => {
       <Button
         onClick={() => ComboBoxClean()}
         className='mt-4 w-full bg-input text-base font-medium uppercase text-brand-500 hover:bg-input/80'
+        data-testid='clean-challenge-filter'
       >
         Limpar
       </Button>
