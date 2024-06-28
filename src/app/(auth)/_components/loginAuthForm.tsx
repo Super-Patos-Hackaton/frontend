@@ -63,7 +63,7 @@ const LoginAuthForm = () => {
     <form
       data-testid='login-form'
       className='m-auto flex w-1/3 flex-col gap-4'
-      onSubmit={handleSubmit(() => onSubmit)}
+      onSubmit={handleSubmit(onSubmit)}
     >
       <div>
         <Input
