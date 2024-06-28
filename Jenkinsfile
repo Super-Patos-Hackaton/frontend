@@ -3,12 +3,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git 'https://github.com/Super-Patos-Hackaton/frontend.git'
             }
         }
-        stage('Install Dependencies') {
+        stage('Build') {
             steps {
                 sh 'npm install'
+                sh 'npm run build'
             }
         }
         stage('Run ESLint') {
@@ -17,15 +18,10 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            archiveArtifacts artifacts: '**/eslint-report.html', allowEmptyArchive: true
-        }
-        success {
-            echo 'Linting passed!'
-        }
-        failure {
-            echo 'Linting failed!'
+        stage('Deploy') {
+            steps {
+                sh 'docker-compose up -d frontend'
+            }
         }
     }
 }
