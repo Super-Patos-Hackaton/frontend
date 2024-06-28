@@ -1,4 +1,9 @@
-import { ChallengeLevel } from '@/types/challenges';
+export type ChallengeLevel =
+  | 'beginner'
+  | 'intermediate'
+  | 'advanced'
+  | 'expert';
+
 
 export const challengeLevels = {
   beginner: 'Iniciante',
@@ -7,12 +12,20 @@ export const challengeLevels = {
   expert: 'Expert',
 };
 
+const startDate = new Date(2024, 11, 16);
+
+const endDate = new Date(2024, 11, 20);
+
+
 export const challenges = [
   {
     id: 1,
     title: 'Desafio #1',
     techs: ['HTML', 'CSS', 'JavaScript'],
     challengeLevel: 'beginner' as ChallengeLevel,
+    isAnEvent: false,
+    eventStartDate: startDate,
+    eventEndDate: endDate,
     interfaceDescription:
       'Nam enim ipsum, ullamcorper bibendum ipsum sit amet, pellentesque sollicitudin mauris. Aenean aliquet hendrerit pharetra. Ut et ultrices odio.',
     description:
@@ -21,8 +34,11 @@ export const challenges = [
   {
     id: 2,
     title: 'Desafio #2',
-    techs: ['HTML', 'CSS', 'JavaScript'],
+    techs: ['HTML', 'CSS', 'TypeScript'],
     challengeLevel: 'beginner' as ChallengeLevel,
+    isAnEvent: false,
+    eventStartDate: startDate,
+    eventEndDate: endDate,
     interfaceDescription:
       'Nam enim ipsum, ullamcorper bibendum ipsum sit amet, pellentesque sollicitudin mauris. Aenean aliquet hendrerit pharetra. Ut et ultrices odio.',
     description:
@@ -33,6 +49,9 @@ export const challenges = [
     title: 'Desafio #3',
     techs: ['HTML', 'CSS', 'JavaScript'],
     challengeLevel: 'beginner' as ChallengeLevel,
+    isAnEvent: false,
+    eventStartDate: startDate,
+    eventEndDate: endDate,
     interfaceDescription:
       'Nam enim ipsum, ullamcorper bibendum ipsum sit amet, pellentesque sollicitudin mauris. Aenean aliquet hendrerit pharetra. Ut et ultrices odio.',
     description:
@@ -43,6 +62,9 @@ export const challenges = [
     title: 'Desafio #4',
     techs: ['HTML', 'CSS', 'JavaScript'],
     challengeLevel: 'beginner' as ChallengeLevel,
+    isAnEvent: false,
+    eventStartDate: startDate,
+    eventEndDate: endDate,
     interfaceDescription:
       'Nam enim ipsum, ullamcorper bibendum ipsum sit amet, pellentesque sollicitudin mauris. Aenean aliquet hendrerit pharetra. Ut et ultrices odio.',
     description:
@@ -53,6 +75,9 @@ export const challenges = [
     title: 'Desafio #5',
     techs: ['HTML', 'CSS', 'JavaScript', 'React'],
     challengeLevel: 'intermediate' as ChallengeLevel,
+    isAnEvent: false,
+    eventStartDate: startDate,
+    eventEndDate: endDate,
     interfaceDescription:
       'Nam enim ipsum, ullamcorper bibendum ipsum sit amet, pellentesque sollicitudin mauris. Aenean aliquet hendrerit pharetra. Ut et ultrices odio.',
     description:
@@ -60,9 +85,12 @@ export const challenges = [
   },
   {
     id: 6,
-    title: 'Desafio #6',
+    title: 'Evento de Natal',
     techs: ['HTML', 'CSS', 'JavaScript', 'React'],
     challengeLevel: 'intermediate' as ChallengeLevel,
+    isAnEvent: true,
+    eventStartDate: startDate,
+    eventEndDate: endDate,
     interfaceDescription:
       'Nam enim ipsum, ullamcorper bibendum ipsum sit amet, pellentesque sollicitudin mauris. Aenean aliquet hendrerit pharetra. Ut et ultrices odio.',
     description:

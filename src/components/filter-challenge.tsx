@@ -12,7 +12,7 @@ import { Combobox } from './ui/combobox';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 
-export default function FilterChallenge() {
+const FilterChallenge = () => {
   const router = useRouter();
   const pathName = usePathname();
   const searchParams = useSearchParams();
@@ -76,7 +76,7 @@ export default function FilterChallenge() {
         <Combobox
           items={sort}
           placeholder='Ordenar por'
-          comboType='order'
+          comboType='sort'
           comboBoxCleaner={comboBoxCleaner}
           clearComboBoxClean={clearComboBoxClean}
         />
@@ -86,7 +86,7 @@ export default function FilterChallenge() {
         <Combobox
           items={stacks}
           placeholder='Tecnologia'
-          comboType='technology'
+          comboType='stacks'
           comboBoxCleaner={comboBoxCleaner}
           clearComboBoxClean={clearComboBoxClean}
         />
@@ -110,4 +110,6 @@ export default function FilterChallenge() {
       </Button>
     </form>
   );
-}
+};
+
+export default FilterChallenge;

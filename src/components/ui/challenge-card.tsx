@@ -88,7 +88,7 @@ export const ChallengeCard = ({
       <div className='col-span-5 flex flex-col bg-secondary p-4'>
         <Typography.H2 className='mb-2 text-brand-500'>{title}</Typography.H2>
 
-        <div className='flex items-center gap-1'>
+        <div className='flex flex-wrap items-center gap-1'>
           {techs.map((tech, index) => (
             <Badge
               variant='outline'

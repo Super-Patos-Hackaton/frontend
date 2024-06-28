@@ -9,3 +9,6 @@ export type ChallengeLevel =
   | 'intermediate'
   | 'advanced'
   | 'expert';
+
+export type ChallengeTypes = 'perm' | 'event';
+
