@@ -1,12 +1,13 @@
-import { it, describe, expect } from "vitest"
-import { render, screen } from "@testing-library/react"
+import { render, screen } from '@testing-library/react';
 
-import { Button } from "./button"
+import { describe, expect, it } from 'vitest';
 
-describe("Button", () => {
-  it("renders a button", () => {
-    render(<Button>Test</Button>)
+import { Button } from './button';
 
-    expect(screen.getByText("Test")).toBeInTheDocument()
-  })
-})
+describe('Button', () => {
+  it('renders a button', () => {
+    render(<Button>Test</Button>);
+
+    expect(screen.getByText('Test')).toBeInTheDocument();
+  });
+});

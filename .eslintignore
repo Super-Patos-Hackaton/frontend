@@ -1,0 +1,7 @@
+*.config.*
+node_modules
+.next
+.husky
+.editorconfig
+public
+Jenkinsfile
