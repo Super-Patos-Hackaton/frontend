@@ -165,10 +165,16 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        'alert-appear': {
+          '0%': { top: '-6rem' },
+          '20%': { top: '2rem' },
+          '100%': { top: '2rem' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        appearing: 'alert-appear 4s ease-out',
       },
       // boxShadow: {
       //   // light
