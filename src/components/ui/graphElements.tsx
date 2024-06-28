@@ -39,7 +39,7 @@ const CircularProgress = ({
         <text
           className='flex content-center items-center fill-foreground text-xl font-semibold'
           x='50'
-          y='57'
+          y='50'
           textAnchor='middle'
           alignmentBaseline='middle'
         >

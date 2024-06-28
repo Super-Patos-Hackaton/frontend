@@ -52,30 +52,32 @@ export const NavLinksSidebar = () => {
       </div>
 
       <div className='w-full'>
-        <Button
-          className={cn(
-            'mb-1 h-10 w-full items-center justify-start bg-transparent text-red-400 hover:bg-brand-400/15',
-            !sidebar?.isOpen && 'block'
-          )}
-        >
-          <span className={cn(!sidebar?.isOpen ? '' : 'mr-4')}>
-            <LogOut
-              size={20}
-              className={cn(!sidebar?.isOpen && 'translate-y-0.5')}
-            />
-          </span>
-
-          <p
+        <Link href='/'>
+          <Button
             className={cn(
-              'max-w-[200px] truncate text-base',
-              !sidebar?.isOpen
-                ? '-translate-x-96 opacity-0'
-                : 'translate-x-0 opacity-100'
+              'mb-1 h-10 w-full items-center justify-start bg-transparent text-red-400 hover:bg-brand-400/15',
+              !sidebar?.isOpen && 'block'
             )}
           >
-            Sair
-          </p>
-        </Button>
+            <span className={cn(!sidebar?.isOpen ? '' : 'mr-4')}>
+              <LogOut
+                size={20}
+                className={cn(!sidebar?.isOpen && 'translate-y-0.5')}
+              />
+            </span>
+
+            <p
+              className={cn(
+                'max-w-[200px] truncate text-base',
+                !sidebar?.isOpen
+                  ? '-translate-x-96 opacity-0'
+                  : 'translate-x-0 opacity-100'
+              )}
+            >
+              Sair
+            </p>
+          </Button>
+        </Link>
       </div>
     </>
   );

@@ -86,7 +86,7 @@ const ChallengesPage = () => {
                   .map((challenge) => (
                     <Link
                       key={challenge.id}
-                      href={`/dashboard/challenges/${challenge.id}`}
+                      href={`/dashboard/challenges/acceptance/${challenge.id}`}
                     >
                       <ChallengeCard
                         title={challenge.title}
