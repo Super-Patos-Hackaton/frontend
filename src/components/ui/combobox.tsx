@@ -80,6 +80,7 @@ export function Combobox({
           role='combobox'
           aria-expanded={open}
           className='w-full justify-between rounded-md border-placeholder bg-input text-brand-400 hover:bg-input/80 hover:text-brand-400'
+          data-testid={`combobox ${comboType}`}
         >
           {value
             ? items.find((item) => item.value === value)?.label

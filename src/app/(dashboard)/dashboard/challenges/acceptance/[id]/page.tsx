@@ -104,6 +104,7 @@ const AcceptanceChallengePage = ({ params }: AcceptanceChallengePageProps) => {
                   priority
                   width={700}
                   height={700}
+                  data-testid='acceptance-challenge-image'
                 />
               </div>
 
@@ -137,6 +138,7 @@ const AcceptanceChallengePage = ({ params }: AcceptanceChallengePageProps) => {
                 challenge.id === data?.id && 'hidden'
               )}
               key={challenge.title + challenge.id}
+              data-testid={`acceptance-challenge-${challenge.id}`}
             >
               <ChallengeCard
                 title={challenge.title}
