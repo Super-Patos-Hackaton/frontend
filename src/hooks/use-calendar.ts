@@ -5,14 +5,26 @@ import { create } from 'zustand';
 interface useCalendarStore {
   date: Date;
   challengesDeadline: ChallengeDeadline[];
-  setDate: (payload: Date | undefined) => void;
-  setChallengesDeadline: (payload: ChallengeDeadline[]) => void;
+  setDate: () => void;
+  setChallengesDeadline: () => void;
 }
 
-export const useCalendar = create<useCalendarStore>((set) => ({
+const dateMock: ChallengeDeadline[] = [
+  {
+    id: '1',
+    deadline: new Date(2024, 5, 27),
+    title: 'Primeiro Maravilhoso Hackaton da Bichinhos da TI',
+  },
+  {
+    id: '2',
+    deadline: new Date(2024, 5, 29),
+    title: 'Segundo Maravilhoso Hackaton da Bichinhos da TI',
+  },
+];
+
+export const useCalendar = create<useCalendarStore>(() => ({
   date: new Date(),
-  challengesDeadline: [],
-  setDate: (payload) => set(() => ({ date: payload })),
-  setChallengesDeadline: (payload) =>
-    set(() => ({ challengesDeadline: payload })),
+  challengesDeadline: dateMock,
+  setDate: () => {},
+  setChallengesDeadline: () => {},
 }));

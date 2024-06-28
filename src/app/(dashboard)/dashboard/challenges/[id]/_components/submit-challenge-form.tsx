@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { type SubmitHandler, useForm } from 'react-hook-form';
 
 import { Button } from '@/components/ui/button';
@@ -40,6 +41,7 @@ type SubmitChallengeFormSchema = z.infer<typeof submitChallengeFormSchema>;
 
 export const SubmitChallengeForm = () => {
   const { toast } = useToast();
+  const router = useRouter();
 
   const { register, formState, handleSubmit, watch } =
     useForm<SubmitChallengeFormSchema>({
@@ -53,6 +55,7 @@ export const SubmitChallengeForm = () => {
       title: 'Seu desafio foi enviado para moderação!',
       description: 'Aguarde um pouco para que ele seja aprovado',
     });
+    router.push('/dashboard');
   };
 
   const watchTextarea = watch('comment');

@@ -42,7 +42,7 @@ const ChallengesCompletion = ({
             </p>
           </div>
           <div className='flex items-center justify-center'>
-            <Link href='/desafios'>
+            <Link href='/dashboard/challenges'>
               <Button
                 className='rounded-lg border-2 border-brand-500 bg-[#3c3634] font-bold uppercase text-brand-500 hover:bg-[#3c3634]/[0.8]'
                 data-testid='other-challenges-button'

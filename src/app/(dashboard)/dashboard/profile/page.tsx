@@ -47,7 +47,13 @@ export const ProfilePage = () => {
           </div>
 
           <>
-            <strong className='text-2xl'>{user.name}</strong>
+            <strong className='text-2xl'>
+              Fábio{' '}
+              <span className='mr-1 italic text-brand-500'>
+                &quot;Pato&quot;
+              </span>{' '}
+              Neves
+            </strong>
             <Typography.Muted className='text-base leading-4 text-brand-300'>
               Front-End
             </Typography.Muted>

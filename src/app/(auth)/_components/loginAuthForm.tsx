@@ -38,7 +38,7 @@ const LoginAuthForm = () => {
   });
 
   const onSubmit: SubmitHandler<LoginFormSchema> = () => {
-    router.push('/');
+    router.push('/dashboard');
   };
 
   return (

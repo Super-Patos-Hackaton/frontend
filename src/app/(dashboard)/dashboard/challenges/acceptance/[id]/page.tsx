@@ -107,13 +107,17 @@ const AcceptanceChallengePage = ({ params }: AcceptanceChallengePageProps) => {
                   data-testid='acceptance-challenge-image'
                 />
               </div>
-
-              <Button
-                data-testid='accept-challenge-button'
-                className='h-12 w-full rounded-xl tracking-wide'
+              <Link
+                className='w-full'
+                href={`/dashboard/challenges/${params.id}`}
               >
-                ACEITAR DESAFIO
-              </Button>
+                <Button
+                  data-testid='accept-challenge-button'
+                  className='h-12 w-full rounded-xl tracking-wide'
+                >
+                  ACEITAR DESAFIO
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
