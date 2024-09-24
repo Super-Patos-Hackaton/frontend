@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+
 <div align="center">
   <h3 align="center">Desafio do Pato</h3>
   <p align="center">
@@ -10,51 +11,74 @@
   <summary>Sumário</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o projeto</a>
+      <a href="#-sobre-o-projeto">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Feito com</a></li>
+        <li><a href="#%EF%B8%8F-feito-com">Feito com</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Como rodar o projeto</a>
+      <a href="#-como-rodar-o-projeto">Como rodar o projeto</a>
       <ul>
-        <li><a href="#prerequisites">Pré-requisitos</a></li>
-        <li><a href="#installation">Instalação</a></li>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
       </ul>
+      <li>
+        <a href="#-recursos-do-projeto">Recursos do Projeto</a>
+        <ul>
+          <li><a href="#componentes-shadcnui">Componentes shadcn/ui</a></li>
+          <li>
+            <a href="#tipografia">Tipografia</a>
+          </li>
+        </ul>
+      </li>
+     <li>
+        <a href="#-lint-e-formatação-do-código">Lint e formatação do Código</a>
+        <ul>
+          <li><a href="#processo-de-pull-request">Processo de Pull Request</a></li>
+          <li><a href="#padrões-de-código">Padrões de Código</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#-guia-de-contribuição">Guia de Contribuição</a>
+        <ul>
+          <li><a href="#processo-de-pull-request">Processo de Pull Request</a></li>
+          <li><a href="#padrões-de-código">Padrões de Código</a></li>
+        </ul>
+      </li>
     </li>
+
   </ol>
 </details>
 
-## Sobre o projeto
+## 💭 Sobre o projeto
+
 Front-end da aplicação Desafio do Pato, cujo objetivo visa ampliar e simplificar o processo de nivelamento contínuo dos integrantes da Bichinhos da TI, oferecendo uma interface para criar, gerenciar e participar de desafios técnicos.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
+### 🖥️ Feito com
 
-
-### Feito com
-
-* [![Next][Next.js]][Next-url]
-* [![TypeScript][Typescript]][Typescript-url]
-* [![Tailwind][TailwindCSS]][Tailwind-url]
-* [![ReactQuery][ReactQuery]][ReactQuery-url]
-
+- [![Next][Next.js]][Next-url]
+- [![TypeScript][Typescript]][Typescript-url]
+- [![Tailwind][TailwindCSS]][Tailwind-url]
+- [![ReactQuery][ReactQuery]][ReactQuery-url]
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
-## Como rodar o projeto
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+## 🔥 Como rodar o projeto
 
 ### Pré-requisitos
 
-* npm
+- npm
   ```sh
   npm install npm@latest -g
+  ```
+
+- pnpm
+  ```sh
+  npm install -g pnpm
   ```
 
 ### Instalação
@@ -67,6 +91,112 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    pnpm install
    ```
+3. Prepare os git hooks com Husky
+   ```sh
+   pnpm prepare
+   ```
+4. Inicie o ambiente de desenvolvimento
+   ```sh
+   pnpm dev
+   ```
+
+## 🎒 Recursos do Projeto
+
+### Componentes shadcn/ui
+
+- Para adicionar um novo componente:
+  ```sh
+  pnpm ui:add <componente>
+  ```
+  
+### Tipografia
+
+Para o projeto inteiro, utilizaremos a fonte Geist, desenvolvida pela Vercel. Detalhes sobre os termos de uso podem ser encontrados aqui: <a href="https://github.com/vercel/geist-font/blob/main/LICENSE.txt" target="_blank">Licença GEIST</a>.
+
+As Headings H1, H2 e H3 estarão presentes no projeto. Destas, é importante ressaltar que a H1 deverá conter apenas uma instância por página.
+
+Foram configuradas também as tags p, lead e muted para usos textuais diversos.
+
+<details>
+
+#### 1. Importação do componente:
+```js
+import { Typography } from "@/components/ui/typography"
+```
+#### 2. Utilização das tags dentro do tsx:
+
+<strong>Tag h1</strong>
+```js
+<Typography.H1>Título h1.</Typography.H1>
+```
+<strong>Tag h2</strong>
+```js
+<Typography.H2>Título h2.</Typography.H2>
+```
+<strong>Tag h3</strong>
+```js
+<Typography.H3>Título h3.</Typography.H3>
+```
+<strong>Tag p padrão</strong>
+```js
+<Typography.P>Parágrafo padrão.</Typography.P>
+```
+<strong>Tag p com classe lead</strong>
+```js
+<Typography.Lead>Parágrafo de destaque.</Typography.Lead>
+```
+<strong>Tag p com classe muted</strong>
+```js
+<Typography.Muted>Parágrafo que precisa ter destaque inferior a todos os outros.</Typography.Muted>
+```
+</details>
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
+## 🎨 Lint e formatação do Código
+
+Nesse projeto, serão utilizadas as seguintes ferramentas para linting e formatação:
+
+- 🚦 [ESLint](https://eslint.org/) - Ferramenta para analisar o código estaticamente e encontrar e corrigir problemas comuns.
+- 💄 [Prettier](https://prettier.io/) - Um formatador de código que ajuda a manter o código consistente e fácil de ler.
+- 🐶 [Husky](https://typicode.github.io/husky/#/) - Uma ferramenta para adicionar facilmente hooks do Git ao seu projeto.
+- 🔍 [commitlint](https://commitlint.js.org/) - Uma ferramenta para impor um estilo e formatação consistentes nas mensagens de commit.
+- 🐶 [lint-staged](https://github.com/lint-staged/lint-staged) - Uma ferramenta para rodar scripts de linting e formatação apenas nos arquivos staged para commit.
+
+### Formatação e linting manuais
+Caso seja necessária realizar manualmente ações de linting e formatação, utilize os seguintes comandos:
+
+- <strong>Realizar lint corrigindo os erros encontrados:</strong>
+```
+pnpm lint --fix
+```
+
+- <strong>Realizar lint sem corrigir os erros encontrados:</strong>
+```
+pnpm lint
+```
+
+- <strong>Realizar formatação:</strong>
+```
+pnpm dlx prettier --write src/**
+```
+
+## 💡 Guia de Contribuição
+
+Obrigado por considerar contribuir para este projeto! Siga as diretrizes abaixo para garantir um processo de contribuição suave.
+
+### Processo de Pull Request
+
+1. Fork o repositório.
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
+3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
+4. Push para a branch (`git push origin feature/nova-feature`).
+5. Abra um Pull Request.
+
+### Padrões de Código
+
+- Siga as convenções de estilo de código do projeto.
+- Certifique-se de que todos os testes passem antes de abrir um PR.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
